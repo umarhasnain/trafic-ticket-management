@@ -20,9 +20,10 @@ export default function Navbar() {
 
   const links = [
     "Home",
-    "How It Works",
+    "Services",
+    "Citations",
     "Violations",
-    "Testimonials",
+    "About",
     "FAQ",
     "Contact",
   ];
@@ -30,7 +31,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
+        className={`fixed bg-black/90 top-0 left-0 z-50 w-full transition-all duration-300 ${
           scrolled
             ? "bg-black/90 backdrop-blur-xl border-b border-yellow-500/20"
             : "bg-transparent"
@@ -49,7 +50,7 @@ export default function Navbar() {
               {links.map((item) => (
                 <a
                   key={item}
-                  href="#"
+                  href={`/${item.toLowerCase()}`}
                   className="text-white/90 hover:text-yellow-400 transition"
                 >
                   {item}
@@ -100,7 +101,7 @@ export default function Navbar() {
             {links.map((item) => (
               <a
                 key={item}
-                href="#"
+                href="item"
                 className="text-white text-lg hover:text-yellow-400"
               >
                 {item}

@@ -85,22 +85,22 @@ export default function Footer() {
             <div className="space-y-4 text-gray-400">
               <div className="flex gap-3 items-start">
                 <FaPhoneAlt className="text-yellow-400 mt-1" />
-                <span>(123) 456-7890</span>
+                <span>(305) 442-0243</span>
               </div>
 
               <div className="flex gap-3 items-start">
                 <FaEnvelope className="text-yellow-400 mt-1" />
                 <span>
-                  support@trafficticket.com
+                  info@heretodefendyou.com
                 </span>
               </div>
 
               <div className="flex gap-3 items-start">
                 <FaMapMarkerAlt className="text-yellow-400 mt-1" />
                 <span>
-                  123 Main Street,
+                  122 Minorca Avenue,
                   <br />
-                  New York, NY
+                  Coral Gables, FL 33134
                 </span>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function Footer() {
           </p>
 
           <p className="text-gray-500">
-            Built with ❤️ for Drivers
+            Developed by {"Bloops Designs"}.
           </p>
         </div>
       </div>
