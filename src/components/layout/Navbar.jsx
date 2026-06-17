@@ -79,7 +79,7 @@ export default function Navbar() {
       </header>
 
       <div
-        className={`fixed top-0 right-0 z-[60] h-screen w-[320px] bg-black transition-all duration-500 ${
+        className={`fixed top-0 right-0 z-60 h-screen w-[320px] bg-black transition-all duration-500 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -110,13 +110,17 @@ export default function Navbar() {
           </div>
 
           <div className="mt-10 flex flex-col gap-3">
+            <Link href="/submit-ticket"> 
             <button className="bg-yellow-400 text-black py-3 rounded-xl font-semibold">
               Submit Ticket
             </button>
+            </Link>
 
+<Link href="/contact">
             <button className="border border-yellow-400 text-yellow-400 py-3 rounded-xl">
               Call Now
             </button>
+            </Link>
           </div>
         </div>
       </div>
