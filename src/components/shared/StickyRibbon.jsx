@@ -1,5 +1,6 @@
 "use client";
 
+import { Link } from "lucide-react";
 import { FaBolt } from "react-icons/fa";
 
 export default function StickyRibbon() {
@@ -33,6 +34,7 @@ export default function StickyRibbon() {
             Submit your ticket today and get a faster review.
           </p>
         </div>
+<Link href="/submit-ticket">
 
         <button
           className="
@@ -47,7 +49,7 @@ export default function StickyRibbon() {
           "
         >
           Submit Ticket
-        </button>
+        </button> </Link>
       </div>
     </div>
   );

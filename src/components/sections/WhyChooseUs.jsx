@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
 
               <div className="relative rounded-[32px] overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200&auto=format&fit=crop"
+                  src="/assets/images/images.jpg"
                   alt="Traffic Assistance"
                   width={800}
                   height={900}
