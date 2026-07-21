@@ -59,13 +59,19 @@ export default function Navbar() {
             </nav>
 
             <div className="hidden lg:flex items-center gap-3">
+              <Link href='/contact'> 
               <button className="px-5 py-3 rounded-xl border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition">
                 Call Now
               </button>
+</Link>
+<Link href='submit-ticket'>
+
 
               <button className="px-5 py-3 rounded-xl bg-yellow-400 text-black font-semibold hover:scale-105 transition">
                 Submit Ticket
               </button>
+
+              </Link>
             </div>
 
             <button

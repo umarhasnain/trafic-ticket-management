@@ -1,10 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { FaTicketAlt } from "react-icons/fa";
 
 export default function FloatingCTA() {
   return (
     <div className="fixed bottom-6 right-6 z-[999]">
+      <Link href='/submit-ticket'>
       <button
         className="
           group
@@ -30,10 +32,12 @@ export default function FloatingCTA() {
 
         <FaTicketAlt className="relative z-10 text-lg" />
 
+
         <span className="absolute inset-0 rounded-full animate-ping bg-yellow-400 opacity-20">
           Submit Ticket
         </span>
       </button>
+</Link>
     </div>
   );
 }
