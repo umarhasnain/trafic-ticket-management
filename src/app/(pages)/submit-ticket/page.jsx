@@ -2413,7 +2413,7 @@ export default function SubmitTicketPage() {
             <div className="flex justify-between">
               <span>Citation Number</span>
               <span className="font-semibold">
-                {formData.ticketNumber}
+                {formData?.citationNumber}
               </span>
             </div>
 
