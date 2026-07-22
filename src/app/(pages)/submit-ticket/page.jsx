@@ -751,6 +751,7 @@ import {
   trafficInfractions,
   criminalViolations,
 } from "@/utils/violations";
+import ConvergePayment from "@/components/ConvergePayment";
 
 
 export default function SubmitTicketPage() {
@@ -788,42 +789,122 @@ export default function SubmitTicketPage() {
     ...criminalViolations,
   ];
 
-  const handleSubmit = async () => {
-    setLoading(true);
-    // Fake API Delay
-    await new Promise((resolve) =>
-      setTimeout(resolve, 2000)
-    );
+//   const handleSubmit = async () => {
+//     setLoading(true);
+//     // Fake API Delay
+//     await new Promise((resolve) =>
+//       setTimeout(resolve, 2000)
+//     );
 
-    setLoading(false);
-    setSubmitted(true);
+//     setLoading(false);
+//     setSubmitted(true);
+// await fetch("/api/tickets",{
+//   method:"POST",
+//   headers:{
+//     "Content-Type":"application/json"
+//   },
+//   body:JSON.stringify({
+//       first_name:formData.firstName,
+//       last_name:formData.lastName,
+//       email:formData.email,
+//       phone:formData.phone,
+//       citation_number:formData.citationNumber,
+//       county:formData.county,
+//       issue_date:formData.issueDate,
+//       violation_type:formData.violationType,
+//       citations_count:formData.citationsCount,
+//       attorney_fee:formData.attorneyFee,
+//       total_amount:formData.attorneyFee,
+//       payment_status:"Pending",
+//       status:"Pending"
+//   })
+// });
+
+//     Swal.fire({
+//       icon: "success",
+//       title: "Ticket Submitted Successfully!",
+//       text:
+//         "Our traffic attorneys will review your case and contact you shortly.",
+//       confirmButtonColor: "#EAB308",
+//       background: "#111827",
+//       color: "#ffffff",
+//     });
 
 
-    Swal.fire({
-      icon: "success",
-      title: "Ticket Submitted Successfully!",
-      text:
-        "Our traffic attorneys will review your case and contact you shortly.",
-      confirmButtonColor: "#EAB308",
-      background: "#111827",
-      color: "#ffffff",
-    });
+//     setFormData({
+//       violationType: "",
+//       ticketNumber: "",
+//       ticketDate: "",
+//       location: "",
+//       description: "",
+//       fullName: "",
+//       email: "",
+//       phone: "",
+//       address: "",
+//       ticketFront: null,
+//       ticketBack: null,
+//     });
+//   };
 
+const handleSubmit = async () => {
 
-    setFormData({
-      violationType: "",
-      ticketNumber: "",
-      ticketDate: "",
-      location: "",
-      description: "",
-      fullName: "",
-      email: "",
-      phone: "",
-      address: "",
-      ticketFront: null,
-      ticketBack: null,
-    });
-  };
+try{
+
+setLoading(true);
+
+const body=new FormData();
+
+Object.keys(formData).forEach((key)=>{
+
+body.append(key,formData[key]);
+
+});
+
+const res=await fetch("/api/upload-ticket",{
+
+method:"POST",
+
+body
+
+});
+
+const data=await res.json();
+
+setLoading(false);
+
+if(!data.success){
+
+throw new Error(data.message);
+
+}
+
+Swal.fire({
+
+icon:"success",
+
+title:"Submitted Successfully",
+
+text:"Your ticket has been submitted."
+
+});
+
+}catch(err){
+
+setLoading(false);
+
+Swal.fire({
+
+icon:"error",
+
+title:"Submission Failed",
+
+text:err.message
+
+});
+
+}
+
+};
 
   const calculateFee = (ticketType, count = 1) => {
     let baseFee = 100;
@@ -2485,7 +2566,7 @@ export default function SubmitTicketPage() {
 
                 {formData?.attorneyFee +
                   Math.max(
-                    Number(formData.numberOfCitations)-1,
+                    Number(formData?.numberOfCitations)-1,
                     0
                   )*50}
 
@@ -2582,24 +2663,10 @@ export default function SubmitTicketPage() {
         Back
       </button>
 
-      <button
-        onClick={handleSubmit}
-        disabled={loading}
-        className="
-        bg-green-600
-        hover:bg-green-500
-        text-white
-        px-10
-        py-4
-        rounded-xl
-        font-bold
-        disabled:opacity-50
-      "
-      >
-        {loading
-          ? "Processing..."
-          : "Pay & Submit"}
-      </button>
+     <ConvergePayment
+  amount={formData.attorneyFee}
+  onSuccess={handleSubmit}
+/>
 
     </div>
 
