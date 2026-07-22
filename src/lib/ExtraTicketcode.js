@@ -752,30 +752,25 @@ import {
   criminalViolations,
 } from "@/utils/violations";
 import ConvergePayment from "@/components/ConvergePayment";
-import { floridaCounties, ONLINE_PAYMENT_COUNTIES } from "@/utils/counties";
-import Link from "next/link";
 
 
 export default function SubmitTicketPage() {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  // const [eligibility, setEligibility] = useState({
-  //   citationType: "",
-  //   county: "",
-  //   citationDate: "",
-  // });
+  const [eligibility, setEligibility] = useState({
+    citationType: "",
+    county: "",
+    citationDate: "",
+  });
 
   const [eligible, setEligible] = useState(null);
-  const [eligibilityError, setEligibilityError] = useState("");
-  const isNextDisabled = loading || eligibilityError !== "";
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
-    citationType: "infraction",
+
     citationNumber: "",
     county: "",
     issueDate: "",
@@ -794,165 +789,122 @@ export default function SubmitTicketPage() {
     ...criminalViolations,
   ];
 
-  //   const handleSubmit = async () => {
-  //     setLoading(true);
-  //     // Fake API Delay
-  //     await new Promise((resolve) =>
-  //       setTimeout(resolve, 2000)
-  //     );
+//   const handleSubmit = async () => {
+//     setLoading(true);
+//     // Fake API Delay
+//     await new Promise((resolve) =>
+//       setTimeout(resolve, 2000)
+//     );
 
-  //     setLoading(false);
-  //     setSubmitted(true);
-  // await fetch("/api/tickets",{
-  //   method:"POST",
-  //   headers:{
-  //     "Content-Type":"application/json"
-  //   },
-  //   body:JSON.stringify({
-  //       first_name:formData.firstName,
-  //       last_name:formData.lastName,
-  //       email:formData.email,
-  //       phone:formData.phone,
-  //       citation_number:formData.citationNumber,
-  //       county:formData.county,
-  //       issue_date:formData.issueDate,
-  //       violation_type:formData.violationType,
-  //       citations_count:formData.citationsCount,
-  //       attorney_fee:formData.attorneyFee,
-  //       total_amount:formData.attorneyFee,
-  //       payment_status:"Pending",
-  //       status:"Pending"
-  //   })
-  // });
+//     setLoading(false);
+//     setSubmitted(true);
+// await fetch("/api/tickets",{
+//   method:"POST",
+//   headers:{
+//     "Content-Type":"application/json"
+//   },
+//   body:JSON.stringify({
+//       first_name:formData.firstName,
+//       last_name:formData.lastName,
+//       email:formData.email,
+//       phone:formData.phone,
+//       citation_number:formData.citationNumber,
+//       county:formData.county,
+//       issue_date:formData.issueDate,
+//       violation_type:formData.violationType,
+//       citations_count:formData.citationsCount,
+//       attorney_fee:formData.attorneyFee,
+//       total_amount:formData.attorneyFee,
+//       payment_status:"Pending",
+//       status:"Pending"
+//   })
+// });
 
-  //     Swal.fire({
-  //       icon: "success",
-  //       title: "Ticket Submitted Successfully!",
-  //       text:
-  //         "Our traffic attorneys will review your case and contact you shortly.",
-  //       confirmButtonColor: "#EAB308",
-  //       background: "#111827",
-  //       color: "#ffffff",
-  //     });
-
-
-  //     setFormData({
-  //       violationType: "",
-  //       ticketNumber: "",
-  //       ticketDate: "",
-  //       location: "",
-  //       description: "",
-  //       fullName: "",
-  //       email: "",
-  //       phone: "",
-  //       address: "",
-  //       ticketFront: null,
-  //       ticketBack: null,
-  //     });
-  //   };
-  const validateEligibility = () => {
-
-    setEligibilityError("");
-
-    if (formData?.citationType === "criminal") {
-
-      setEligibilityError(
-        "Criminal traffic citations cannot be submitted online. Please contact our office."
-      );
-
-      return false;
-    }
-
-    const issue = new Date(formData?.issueDate);
-
-    const today = new Date();
-
-    const days = Math.floor(
-      (today - issue) / (1000 * 60 * 60 * 24)
-    );
-
-    if (days > 30) {
-
-      setEligibilityError(
-        "This citation is older than 30 days. Please contact our office."
-      );
-
-      return false;
-
-    }
-
-    if (!ONLINE_PAYMENT_COUNTIES.includes(formData.county)) {
-
-      setEligibilityError(
-        `Online payment is not available for ${formData.county}. Please contact our office.`
-      );
-
-      return false;
-    }
-    return true;
-
-  };
+//     Swal.fire({
+//       icon: "success",
+//       title: "Ticket Submitted Successfully!",
+//       text:
+//         "Our traffic attorneys will review your case and contact you shortly.",
+//       confirmButtonColor: "#EAB308",
+//       background: "#111827",
+//       color: "#ffffff",
+//     });
 
 
-  const handleSubmit = async () => {
+//     setFormData({
+//       violationType: "",
+//       ticketNumber: "",
+//       ticketDate: "",
+//       location: "",
+//       description: "",
+//       fullName: "",
+//       email: "",
+//       phone: "",
+//       address: "",
+//       ticketFront: null,
+//       ticketBack: null,
+//     });
+//   };
 
-    try {
+const handleSubmit = async () => {
 
-      setLoading(true);
+try{
 
-      const body = new FormData();
+setLoading(true);
 
-      Object.keys(formData).forEach((key) => {
+const body=new FormData();
 
-        body.append(key, formData[key]);
+Object.keys(formData).forEach((key)=>{
 
-      });
+body.append(key,formData[key]);
 
-      const res = await fetch("/api/upload-ticket", {
+});
 
-        method: "POST",
+const res=await fetch("/api/upload-ticket",{
 
-        body
+method:"POST",
 
-      });
+body
 
-      const data = await res.json();
+});
 
-      setLoading(false);
+const data=await res.json();
 
-      if (!data.success) {
+setLoading(false);
 
-        throw new Error(data.message);
+if(!data.success){
 
-      }
+throw new Error(data.message);
 
-      Swal.fire({
+}
 
-        icon: "success",
+Swal.fire({
 
-        title: "Submitted Successfully",
+icon:"success",
 
-        text: "Your ticket has been submitted."
+title:"Submitted Successfully",
 
-      });
+text:"Your ticket has been submitted."
 
-    } catch (err) {
+});
 
-      setLoading(false);
+}catch(err){
 
-      Swal.fire({
+setLoading(false);
 
-        icon: "error",
+Swal.fire({
 
-        title: "Submission Failed",
+icon:"error",
 
-        text: err.message
+title:"Submission Failed",
 
-      });
+text:err.message
 
-    }
+});
 
-  };
+}
+
+};
 
   const calculateFee = (ticketType, count = 1) => {
     let baseFee = 100;
@@ -1033,13 +985,6 @@ export default function SubmitTicketPage() {
     );
 
     setFormData(updated);
-    if (
-      updated.county &&
-      updated.issueDate &&
-      updated.citationType
-    ) {
-      validateEligibility(updated);
-    }
   };
 
 
@@ -1159,7 +1104,7 @@ export default function SubmitTicketPage() {
 
 
   const nextStep = () => {
-    if (step < 5) {
+    if(step<5) {
       setStep(step + 1);
       // window.scrollTo({
       //   top: 0,
@@ -1423,7 +1368,7 @@ export default function SubmitTicketPage() {
       </section>
 
 
-      {/* <section className="py-20 bg-gray-100">
+      <section className="py-20 bg-gray-100">
 
         <div className="max-w-4xl mx-auto px-5">
 
@@ -1561,7 +1506,7 @@ export default function SubmitTicketPage() {
 
         </div>
 
-      </section> */}
+      </section>
 
 
 
@@ -1648,7 +1593,7 @@ export default function SubmitTicketPage() {
 
           {/* ================= STEP 1 ================= */}
 
-          {step === 1 && (
+          {step === 1 && eligible === true && (
 
             <div
               className="
@@ -1775,37 +1720,6 @@ export default function SubmitTicketPage() {
 
                 </div>
 
-                <div>
-
-                  <label className="font-bold">
-
-                    Citation Type
-
-                  </label>
-
-                  <select
-                    name="citationType"
-                    value={formData.citationType}
-                    onChange={handleChange}
-                    className="mt-2 w-full border rounded-xl p-4"
-                  >
-
-                    <option value="infraction">
-
-                      Traffic Infraction
-
-                    </option>
-
-                    <option value="criminal">
-
-                      Criminal Citation
-
-                    </option>
-
-                  </select>
-
-                </div>
-
                 {/* County */}
 
                 <div>
@@ -1823,20 +1737,11 @@ export default function SubmitTicketPage() {
                     className="mt-2 w-full border rounded-xl p-4"
                   >
 
-                    <option value="">
-                      Select County
-                    </option>
+                    <option value="">Select County</option>
 
-                    {
-                      floridaCounties.map((county) => (
-                        <option
-                          key={county}
-                          value={county}
-                        >
-                          {county}
-                        </option>
-                      ))
-                    }
+                    <option>Miami-Dade</option>
+
+                    <option>Broward</option>
 
                   </select>
 
@@ -1989,71 +1894,8 @@ export default function SubmitTicketPage() {
               {/* Next Button */}
 
               <div className="mt-10 text-right">
-                {
-                  eligibilityError && (
 
-                    <div className="mt-8 rounded-xl border border-red-300 bg-red-50 p-5">
-
-                      <h3 className="font-bold text-red-700">
-
-                        Online Submission Not Available
-
-                      </h3>
-
-                      <p className="mt-2 text-red-600">
-
-                        {eligibilityError}
-
-                      </p>
-
-                      <a
-                        href="tel:+13054420243"
-                        className="
-    inline-flex
-    items-center
-    gap-4
-    mt-6
-    px-7
-    py-4
-    rounded-2xl
-    bg-gradient-to-r
-    from-red-600
-    to-red-700
-    hover:from-red-700
-    hover:to-red-800
-    text-white
-    shadow-lg
-    hover:shadow-red-300/40
-    transition-all
-    duration-300
-    hover:-translate-y-1
-  "
-                      >
-                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-2xl">
-                          📞
-                        </div>
-
-                        <div className="text-left">
-                          <p className="text-xs uppercase tracking-widest text-red-100">
-                            Need Immediate Assistance?
-                          </p>
-
-                          <p className="text-lg font-bold leading-5 py-1">
-                            Call Our Office
-                          </p>
-
-                          <p className="text-sm text-red-100">
-                            (305) 442-0243
-                          </p>
-                        </div>
-                      </a>
-
-                    </div>
-
-                  )
-                }
                 <button
-                  disabled={isNextDisabled}
                   onClick={() => {
                     if (
                       !formData.firstName ||
@@ -2065,41 +1907,31 @@ export default function SubmitTicketPage() {
                       !formData.issueDate ||
                       !formData.violationType
                     ) {
-
                       Swal.fire({
                         icon: "warning",
-                        title: "Complete All Fields"
-                      })
+                        title: "Complete All Fields",
+                        text: "Please fill in all required information.",
+                        confirmButtonColor: "#EAB308",
+                      });
 
                       return;
-
-                    }
-
-                    if (!validateEligibility()) {
-
-                      return;
-
                     }
 
                     nextStep();
                   }}
-
-                  className={`
-    inline-flex
-    items-center
-    gap-2
-    px-8
-    py-4
-    mt-4
-    rounded-xl
-    font-bold
-    transition-all
-
-    ${isNextDisabled
-                      ? "bg-gray-300 text-gray-500 cursor-not-allowed opacity-60 pointer-events-none"
-                      : "bg-yellow-500 hover:bg-yellow-400 text-black"
-                    }
-  `}
+                  className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  bg-yellow-500
+                  hover:bg-yellow-400
+                  text-black
+                  px-8
+                  py-4
+                  rounded-xl
+                  font-bold
+                  transition
+                  "
                 >
 
                   Next Step
@@ -2591,183 +2423,183 @@ export default function SubmitTicketPage() {
 
           {/* ================= STEP 4 ================= */}
 
-          {step === 4 && eligible && (
+{step === 4 && eligible && (
 
-            <div className="p-8 md:p-12">
+  <div className="p-8 md:p-12">
 
-              <h2 className="text-3xl font-black">
-                Review & Payment
-              </h2>
+    <h2 className="text-3xl font-black">
+      Review & Payment
+    </h2>
 
-              <p className="text-gray-500 mt-2 mb-8">
-                Review your information before completing payment.
-              </p>
+    <p className="text-gray-500 mt-2 mb-8">
+      Review your information before completing payment.
+    </p>
 
-              {/* ================= REVIEW ================= */}
+    {/* ================= REVIEW ================= */}
 
-              <div className="grid lg:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-2 gap-8">
 
-                {/* LEFT */}
+      {/* LEFT */}
 
-                <div className="space-y-5">
+      <div className="space-y-5">
 
-                  <div className="rounded-2xl border bg-gray-50 p-6">
+        <div className="rounded-2xl border bg-gray-50 p-6">
 
-                    <h3 className="font-black text-xl mb-5">
-                      Personal Information
-                    </h3>
+          <h3 className="font-black text-xl mb-5">
+            Personal Information
+          </h3>
 
-                    <div className="space-y-3">
+          <div className="space-y-3">
 
-                      <div className="flex justify-between">
-                        <span>Name</span>
-                        <span className="font-semibold">
-                          {formData.firstName} {formData.lastName}
-                        </span>
-                      </div>
+            <div className="flex justify-between">
+              <span>Name</span>
+              <span className="font-semibold">
+                {formData.firstName} {formData.lastName}
+              </span>
+            </div>
 
-                      <div className="flex justify-between">
-                        <span>Email</span>
-                        <span className="font-semibold">
-                          {formData.email}
-                        </span>
-                      </div>
+            <div className="flex justify-between">
+              <span>Email</span>
+              <span className="font-semibold">
+                {formData.email}
+              </span>
+            </div>
 
-                      <div className="flex justify-between">
-                        <span>Phone</span>
-                        <span className="font-semibold">
-                          {formData.phone}
-                        </span>
-                      </div>
+            <div className="flex justify-between">
+              <span>Phone</span>
+              <span className="font-semibold">
+                {formData.phone}
+              </span>
+            </div>
 
-                    </div>
+          </div>
 
-                  </div>
+        </div>
 
-                  <div className="rounded-2xl border bg-gray-50 p-6">
+        <div className="rounded-2xl border bg-gray-50 p-6">
 
-                    <h3 className="font-black text-xl mb-5">
-                      Ticket Information
-                    </h3>
+          <h3 className="font-black text-xl mb-5">
+            Ticket Information
+          </h3>
 
-                    <div className="space-y-3">
+          <div className="space-y-3">
 
-                      <div className="flex justify-between">
-                        <span>Violation</span>
-                        <span className="font-semibold">
-                          {formData.violationType}
-                        </span>
-                      </div>
+            <div className="flex justify-between">
+              <span>Violation</span>
+              <span className="font-semibold">
+                {formData.violationType}
+              </span>
+            </div>
 
-                      <div className="flex justify-between">
-                        <span>Citation Number</span>
-                        <span className="font-semibold">
-                          {formData?.citationNumber}
-                        </span>
-                      </div>
+            <div className="flex justify-between">
+              <span>Citation Number</span>
+              <span className="font-semibold">
+                {formData?.citationNumber}
+              </span>
+            </div>
 
-                      <div className="flex justify-between">
-                        <span>County</span>
-                        <span className="font-semibold">
-                          {eligibility.county}
-                        </span>
-                      </div>
+            <div className="flex justify-between">
+              <span>County</span>
+              <span className="font-semibold">
+                {eligibility.county}
+              </span>
+            </div>
 
-                      <div className="flex justify-between">
-                        <span>Date</span>
-                        <span className="font-semibold">
-                          {eligibility.citationDate}
-                        </span>
-                      </div>
+            <div className="flex justify-between">
+              <span>Date</span>
+              <span className="font-semibold">
+                {eligibility.citationDate}
+              </span>
+            </div>
 
-                    </div>
+          </div>
 
-                  </div>
+        </div>
 
-                </div>
+      </div>
 
-                {/* RIGHT */}
+      {/* RIGHT */}
 
-                <div>
+      <div>
 
-                  <div className="rounded-2xl border-2 border-yellow-400 bg-white p-8 shadow-lg">
+        <div className="rounded-2xl border-2 border-yellow-400 bg-white p-8 shadow-lg">
 
-                    <h3 className="text-2xl font-black mb-8">
-                      Payment Summary
-                    </h3>
+          <h3 className="text-2xl font-black mb-8">
+            Payment Summary
+          </h3>
 
-                    <div className="space-y-4">
+          <div className="space-y-4">
 
-                      <div className="flex justify-between">
-                        <span>Attorney Fee</span>
-                        <span className="font-bold">
-                          ${formData.attorneyFee}
-                        </span>
-                      </div>
+            <div className="flex justify-between">
+              <span>Attorney Fee</span>
+              <span className="font-bold">
+                ${formData.attorneyFee}
+              </span>
+            </div>
 
-                      {Number(formData.numberOfCitations) > 1 && (
+            {Number(formData.numberOfCitations) > 1 && (
 
-                        <div className="flex justify-between">
+              <div className="flex justify-between">
 
-                          <span>
-                            Additional Citation Fee
-                          </span>
+                <span>
+                  Additional Citation Fee
+                </span>
 
-                          <span className="font-bold">
-                            $
-                            {(Number(formData.numberOfCitations) - 1) * 50}
-                          </span>
+                <span className="font-bold">
+                  $
+                  {(Number(formData.numberOfCitations)-1)*50}
+                </span>
 
-                        </div>
+              </div>
 
-                      )}
+            )}
 
-                      <hr />
+            <hr />
 
-                      <div className="flex justify-between text-2xl font-black">
+            <div className="flex justify-between text-2xl font-black">
 
-                        <span>Total</span>
+              <span>Total</span>
 
-                        <span className="text-yellow-600">
+              <span className="text-yellow-600">
 
-                          $
+                $
 
-                          {formData?.attorneyFee +
-                            Math.max(
-                              Number(formData?.numberOfCitations) - 1,
-                              0
-                            ) * 50}
+                {formData?.attorneyFee +
+                  Math.max(
+                    Number(formData?.numberOfCitations)-1,
+                    0
+                  )*50}
 
-                        </span>
+              </span>
 
-                      </div>
+            </div>
 
-                    </div>
+          </div>
 
-                  </div>
+        </div>
 
-                  {/* PAYMENT */}
+        {/* PAYMENT */}
 
-                  <div className="mt-8 rounded-2xl border p-8">
+        <div className="mt-8 rounded-2xl border p-8">
 
-                    <h3 className="font-black text-xl mb-4">
-                      Secure Payment
-                    </h3>
+          <h3 className="font-black text-xl mb-4">
+            Secure Payment
+          </h3>
 
-                    <p className="text-gray-600">
+          <p className="text-gray-600">
 
-                      Payment will be processed securely
-                      through
+            Payment will be processed securely
+            through
 
-                      <strong>
-                        {" "}Elavon Converge Hosted Payment.
-                      </strong>
+            <strong>
+              {" "}Elavon Converge Hosted Payment.
+            </strong>
 
-                    </p>
+          </p>
 
-                    <div
-                      id="converge-payment-form"
-                      className="
+          <div
+            id="converge-payment-form"
+            className="
             mt-6
             border-2
             border-dashed
@@ -2776,104 +2608,72 @@ export default function SubmitTicketPage() {
             text-center
             bg-gray-50
           "
-                    >
+          >
 
-                      Hosted Payment Form
+            Hosted Payment Form
 
-                    </div>
+          </div>
 
-                  </div>
+        </div>
 
-                </div>
+      </div>
 
-              </div>
+    </div>
 
-              {/* TERMS */}
+    {/* TERMS */}
 
-              <div className="mt-10 rounded-2xl bg-yellow-50 border border-yellow-300 p-6">
+    <div className="mt-10 rounded-2xl bg-yellow-50 border border-yellow-300 p-6">
 
-                <label className="flex gap-3 items-start">
+      <label className="flex gap-3 items-start">
 
-                  <input
-                    type="checkbox"
-                    required
-                    className="mt-1"
-                  />
+        <input
+          type="checkbox"
+          required
+          className="mt-1"
+        />
 
-                  <span>
+        <span>
 
-                    I understand that submitting this citation
-                    does not create an attorney-client
-                    relationship until my case has been reviewed
-                    and accepted. Payment authorizes review of my
-                    citation.
+          I understand that submitting this citation
+          does not create an attorney-client
+          relationship until my case has been reviewed
+          and accepted. Payment authorizes review of my
+          citation.
 
-                  </span>
+        </span>
 
-                </label>
+      </label>
 
-              </div>
+    </div>
 
-              {/* BUTTONS */}
+    {/* BUTTONS */}
 
-              <div className="flex justify-between mt-10">
+    <div className="flex justify-between mt-10">
 
-                <button
-                  onClick={prevStep}
-                  className="
+      <button
+        onClick={prevStep}
+        className="
         border
         px-8
         py-4
         rounded-xl
         font-bold
       "
-                >
-                  Back
-                </button>
+      >
+        Back
+      </button>
 
-                {
-                  ONLINE_PAYMENT_COUNTIES.includes(formData.county)
-                    ?
+     <ConvergePayment
+  amount={formData.attorneyFee}
+  onSuccess={handleSubmit}
+/>
 
-                    <ConvergePayment
-                      amount={formData.attorneyFee}
-                      onSuccess={handleSubmit}
-                    />
+    </div>
 
-                    :
+  </div>
 
-                    <div className="rounded-xl bg-red-50 border border-red-300 p-6 my-8">
-
-                      <h3 className="text-xl font-bold text-red-700">
-                        Online Submission Not Available
-                      </h3>
-
-                      <p className="mt-3 text-gray-700">
-                        Unfortunately, online payment and ticket submission are not currently available for
-                        <strong> {formData.county} County</strong>.
-                      </p>
-
-                      <p className="mt-3 text-gray-700">
-                        Please contact our office to speak with one of our traffic attorneys. We will review your citation and advise you on the best available legal options.
-                      </p>
-
-                      <a
-                        href="tel:+13054420243"
-                        className="inline-flex mt-6 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-semibold"
-                      >
-                        📞 Call Our Office
-                      </a>
-
-                    </div>
-
-                }
-
-              </div>
-
-            </div>
-
-          )}
-
+)}
+          
 
         </div>
 
