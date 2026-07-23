@@ -168,7 +168,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed bg-black/90 top-0 left-0 z-50 w-full transition-all duration-300 ${
+        className={`fixed bg-white text-black top-0 left-0 z-50 w-full transition-all duration-300 ${
           scrolled
             ? "bg-black/90 backdrop-blur-xl border-b border-yellow-500/20"
             : "bg-transparent"
@@ -192,7 +192,7 @@ export default function Navbar() {
                 <a
                   key={item}
                   href={`/${item.toLowerCase()}`}
-                  className="text-white/90 hover:text-yellow-400 transition"
+                  className="text-black/90 hover:text-yellow-400 transition"
                 >
                   {item}
                 </a>
