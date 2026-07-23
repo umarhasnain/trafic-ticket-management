@@ -85,7 +85,7 @@ export default function ContactPage() {
       >
         <div className="max-w-7xl mx-auto px-5">
 
-          <p className="text-yellow-400 font-semibold">
+          <p className="text-orange-400 font-semibold">
             Home / Contact
           </p>
 
@@ -165,7 +165,7 @@ export default function ContactPage() {
               <div
                 className="
                 w-16 h-16
-                bg-yellow-400
+                bg-orange-400
                 text-black
                 rounded-full
                 flex
@@ -266,7 +266,7 @@ export default function ContactPage() {
                     rounded-xl
                     border
                     outline-none
-                    focus:border-yellow-500
+                    focus:border-orange-500
                   "
                   />
 
@@ -287,7 +287,7 @@ export default function ContactPage() {
                 rounded-xl
                 border
                 outline-none
-                focus:border-yellow-500
+                focus:border-orange-500
               "
               />
 
@@ -295,8 +295,8 @@ export default function ContactPage() {
               <button
                 className="
                 w-full
-                bg-yellow-400
-                hover:bg-yellow-500
+                bg-orange-400
+                hover:bg-orange-500
                 text-black
                 py-4
                 rounded-xl
@@ -329,7 +329,7 @@ export default function ContactPage() {
           "
           >
 
-            <span className="text-yellow-400 font-bold">
+            <span className="text-orange-400 font-bold">
               Need Immediate Help?
             </span>
 
@@ -350,13 +350,13 @@ export default function ContactPage() {
               href="tel:+13054420243"
               className="
               mt-10
-              bg-yellow-400
+              bg-orange-400
               text-black
               text-center
               py-4
               rounded-xl
               font-black
-              hover:bg-yellow-500
+              hover:bg-orange-500
               transition
             "
             >

@@ -12,8 +12,8 @@ export default function FloatingCTA() {
           group
           relative
           overflow-hidden
-          bg-yellow-400
-          hover:bg-yellow-300
+          bg-orange-400
+          hover:bg-orange-300
           text-black
           font-bold
           px-6
@@ -33,7 +33,7 @@ export default function FloatingCTA() {
         <FaTicketAlt className="relative z-10 text-lg" />
 
 
-        <span className="absolute inset-0 rounded-full animate-ping bg-yellow-400 opacity-20">
+        <span className="absolute inset-0 rounded-full animate-ping bg-orange-400 opacity-20">
           Submit Ticket
         </span>
       </button>

@@ -25,7 +25,7 @@ export default function ViolationPenalties() {
               key={item}
               className="bg-slate-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-xl transition"
             >
-              <AlertTriangle className="mx-auto mb-4 text-yellow-500" />
+              <AlertTriangle className="mx-auto mb-4 text-orange-500" />
 
               <h3 className="font-semibold">
                 {item}

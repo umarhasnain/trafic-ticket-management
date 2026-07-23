@@ -51,19 +51,19 @@ export default function WhyChooseUs() {
           {/* Image Side */}
           <div data-aos="fade-right">
             <div className="relative">
-              <div className="absolute -inset-4 bg-yellow-400/20 blur-3xl rounded-full" />
+              <div className="absolute -inset-4 bg-orange-400/20 blur-3xl rounded-full" />
 
-              <div className="relative rounded-[32px] overflow-hidden shadow-2xl">
+              <div className="relative rounded-4xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/assets/images/images.jpg"
+                  src="/assets/images/img2.png"
                   alt="Traffic Assistance"
                   width={800}
                   height={900}
-                  className="w-full h-[650px] object-cover"
+                  className="w-full h-162.5 object-cover"
                 />
               </div>
 
-              <div className="absolute bottom-6 left-6 right-6 bg-black/90 backdrop-blur-xl rounded-3xl p-6 border border-yellow-500/20">
+              <div className="absolute bottom-6 left-6 right-6 bg-black/90 backdrop-blur-xl rounded-3xl p-6 border border-orange-500/20">
                 <h3 className="text-white text-xl font-bold">
                   10,000+ Drivers Helped
                 </h3>
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
 
           {/* Content Side */}
           <div data-aos="fade-left">
-            <span className="inline-block px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 font-semibold">
+            <span className="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-700 font-semibold">
               WHY CHOOSE US
             </span>
 
@@ -98,9 +98,9 @@ export default function WhyChooseUs() {
                     key={index}
                     data-aos="zoom-in"
                     data-aos-delay={index * 100}
-                    className="p-5 rounded-2xl border border-gray-200 hover:border-yellow-400 hover:shadow-xl transition-all duration-300"
+                    className="p-5 rounded-2xl border border-gray-200 hover:border-orange-400 hover:shadow-xl transition-all duration-300"
                   >
-                    <div className="w-14 h-14 rounded-xl bg-yellow-100 flex items-center justify-center text-yellow-500 text-xl">
+                    <div className="w-14 h-14 rounded-xl bg-orange-100 flex items-center justify-center text-orange-500 text-xl">
                       <Icon />
                     </div>
 

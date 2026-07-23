@@ -10,7 +10,7 @@ export default function FirmStory() {
           data-aos="fade-up"
           className="max-w-4xl mx-auto text-center"
         >
-          <span className="px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400">
+          <span className="px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400">
             OUR STORY
           </span>
 

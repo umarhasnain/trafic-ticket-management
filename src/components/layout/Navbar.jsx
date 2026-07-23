@@ -33,7 +33,7 @@
 //       <header
 //         className={`fixed bg-black/90 top-0 left-0 z-50 w-full transition-all duration-300 ${
 //           scrolled
-//             ? "bg-black/90 backdrop-blur-xl border-b border-yellow-500/20"
+//             ? "bg-black/90 backdrop-blur-xl border-b border-orange-500/20"
 //             : "bg-transparent"
 //         }`}
 //       >
@@ -42,7 +42,7 @@
 //             <Link href="/">
 //               <h2 className="text-2xl font-black text-white">
 //                 Traffic
-//                 <span className="text-yellow-400"> Ticket</span>
+//                 <span className="text-orange-400"> Ticket</span>
 //               </h2>
 //             </Link>
 
@@ -51,7 +51,7 @@
 //                 <a
 //                   key={item}
 //                   href={`/${item.toLowerCase()}`}
-//                   className="text-white/90 hover:text-yellow-400 transition"
+//                   className="text-white/90 hover:text-orange-400 transition"
 //                 >
 //                   {item}
 //                 </a>
@@ -60,14 +60,14 @@
 
 //             <div className="hidden lg:flex items-center gap-3">
 //               <Link href='/contact'> 
-//               <button className="px-5 py-3 rounded-xl border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition">
+//               <button className="px-5 py-3 rounded-xl border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition">
 //                 Call Now
 //               </button>
 // </Link>
 // <Link href='submit-ticket'>
 
 
-//               <button className="px-5 py-3 rounded-xl bg-yellow-400 text-black font-semibold hover:scale-105 transition">
+//               <button className="px-5 py-3 rounded-xl bg-orange-400 text-black font-semibold hover:scale-105 transition">
 //                 Submit Ticket
 //               </button>
 
@@ -108,7 +108,7 @@
 //               <a
 //                 key={item}
 //                 href="item"
-//                 className="text-white text-lg hover:text-yellow-400"
+//                 className="text-white text-lg hover:text-orange-400"
 //               >
 //                 {item}
 //               </a>
@@ -117,13 +117,13 @@
 
 //           <div className="mt-10 flex flex-col gap-3">
 //             <Link href="/submit-ticket"> 
-//             <button className="bg-yellow-400 text-black py-3 rounded-xl font-semibold">
+//             <button className="bg-orange-400 text-black py-3 rounded-xl font-semibold">
 //               Submit Ticket
 //             </button>
 //             </Link>
 
 // <Link href="/contact">
-//             <button className="border border-yellow-400 text-yellow-400 py-3 rounded-xl">
+//             <button className="border border-orange-400 text-orange-400 py-3 rounded-xl">
 //               Call Now
 //             </button>
 //             </Link>
@@ -170,7 +170,7 @@ export default function Navbar() {
       <header
         className={`fixed bg-white text-black top-0 left-0 z-50 w-full transition-all duration-300 ${
           scrolled
-            ? "bg-black/90 backdrop-blur-xl border-b border-yellow-500/20"
+            ? "bg-black/90 backdrop-blur-xl border-b border-orange-500/20"
             : "bg-transparent"
         }`}
       >
@@ -192,7 +192,7 @@ export default function Navbar() {
                 <a
                   key={item}
                   href={`/${item.toLowerCase()}`}
-                  className="text-black/90 hover:text-yellow-400 transition"
+                  className="text-black/90 hover:text-orange-400 transition"
                 >
                   {item}
                 </a>
@@ -201,13 +201,13 @@ export default function Navbar() {
 
             <div className="hidden lg:flex items-center gap-3">
               <Link href="/contact">
-                <button className="px-5 py-3 rounded-xl border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition">
+                <button className="px-5 py-3 rounded-xl border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition">
                   Call Now
                 </button>
               </Link>
 
               <Link href="submit-ticket">
-                <button className="px-5 py-3 rounded-xl bg-yellow-400 text-black font-semibold hover:scale-105 transition">
+                <button className="px-5 py-3 rounded-xl bg-orange-400 text-black font-semibold hover:scale-105 transition">
                   Submit Ticket
                 </button>
               </Link>
@@ -251,7 +251,7 @@ export default function Navbar() {
               <a
                 key={item}
                 href={`/${item.toLowerCase()}`}
-                className="text-white text-lg hover:text-yellow-400"
+                className="text-white text-lg hover:text-orange-400"
               >
                 {item}
               </a>
@@ -260,13 +260,13 @@ export default function Navbar() {
 
           <div className="mt-10 flex flex-col gap-3">
             <Link href="/submit-ticket">
-              <button className="bg-yellow-400 text-black py-3 rounded-xl font-semibold">
+              <button className="bg-orange-400 text-black py-3 rounded-xl font-semibold">
                 Submit Ticket
               </button>
             </Link>
 
             <Link href="/contact">
-              <button className="border border-yellow-400 text-yellow-400 py-3 rounded-xl">
+              <button className="border border-orange-400 text-orange-400 py-3 rounded-xl">
                 Call Now
               </button>
             </Link>

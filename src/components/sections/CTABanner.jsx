@@ -10,7 +10,7 @@ export default function CTABanner() {
       <div className="max-w-7xl mx-auto px-5 lg:px-8 relative z-10">
         <div
           data-aos="zoom-in"
-          className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 rounded-[40px] p-10 lg:p-16 shadow-[0_20px_80px_rgba(250,204,21,.35)]"
+          className="bg-gradient-to-r from-[#ff4103] via-yellow-500 to-[#ff4103] rounded-[40px] p-10 lg:p-16 shadow-[0_20px_80px_rgba(250,204,21,.35)]"
         >
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>

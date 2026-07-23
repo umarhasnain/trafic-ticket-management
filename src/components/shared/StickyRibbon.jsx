@@ -11,9 +11,9 @@ export default function StickyRibbon() {
           max-w-6xl
           mx-auto
           bg-gradient-to-r
-          from-yellow-400
-          via-yellow-500
-          to-yellow-400
+          from-orange-400
+          via-orange-500
+          to-orange-400
           rounded-2xl
           shadow-xl
           px-6

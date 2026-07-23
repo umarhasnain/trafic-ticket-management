@@ -24,7 +24,7 @@ export default function AttorneyBio() {
           </div>
 
           <div data-aos="fade-left">
-            <span className="text-yellow-500 font-bold">
+            <span className="text-orange-500 font-bold">
               FOUNDING ATTORNEY
             </span>
 
@@ -84,7 +84,7 @@ export default function AttorneyBio() {
             data-aos="fade-right"
             className="order-2 lg:order-1"
           >
-            <span className="text-yellow-500 font-bold">
+            <span className="text-orange-500 font-bold">
               PARTNER ATTORNEY
             </span>
 

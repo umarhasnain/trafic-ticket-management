@@ -4,6 +4,7 @@ import CTABanner from '@/components/sections/CTABanner'
 import FAQ from '@/components/sections/FAQ'
 import Hero from '@/components/sections/Hero'
 import HowItWorks from '@/components/sections/HowItWorks'
+import ImageBanner from '@/components/sections/ImageBanner'
 import Statistics from '@/components/sections/Statistics'
 import Testimonials from '@/components/sections/Testimonials'
 import TrustBadges from '@/components/sections/TrustBadges'
@@ -20,7 +21,7 @@ const Home = () => {
       {/* <Navbar /> */}
       <Hero />
 
-{/* <StickyRibbon /> */}
+      {/* <StickyRibbon /> */}
       <TrustBadges />
 
       <HowItWorks />
@@ -31,13 +32,14 @@ const Home = () => {
       <Statistics />
 
       <Testimonials />
+     <ImageBanner />
       <FAQ />
 
       <CTABanner />
-<FloatingCTA />
+      <FloatingCTA />
       {/* <Footer /> */}
 
-<MobileBottomBar />
+      <MobileBottomBar />
     </div>
   )
 }

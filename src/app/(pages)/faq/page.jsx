@@ -39,7 +39,7 @@ export default function FAQPage() {
       {/* TOP HEADER */}
       <div className="max-w-6xl mx-auto px-6 py-12">
         <h1 className="text-5xl font-bold">
-          Traffic Law <span className="text-yellow-400">FAQ</span>
+          Traffic Law <span className="text-orange-400">FAQ</span>
         </h1>
 
         <p className="text-slate-300 mt-2">
@@ -52,7 +52,7 @@ export default function FAQPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search anything..."
-            className="w-full p-4 rounded-2xl bg-white/10 backdrop-blur border border-white/20 outline-none focus:border-yellow-400 transition"
+            className="w-full p-4 rounded-2xl bg-white/10 backdrop-blur border border-white/20 outline-none focus:border-orange-400 transition"
           />
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function FAQPage() {
               className={`w-full text-left px-4 py-3 rounded-xl transition font-medium
               ${
                 activeCategory === c
-                  ? "bg-yellow-400 text-black"
+                  ? "bg-orange-400 text-black"
                   : "bg-white/5 hover:bg-white/10"
               }`}
             >
@@ -90,7 +90,7 @@ export default function FAQPage() {
           {filtered.map((item, i) => (
             <div
               key={i}
-              className="group bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur hover:border-yellow-400 transition"
+              className="group bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur hover:border-orange-400 transition"
             >
 
               <button
@@ -103,16 +103,16 @@ export default function FAQPage() {
                 <div className="flex justify-between items-start gap-4">
 
                   <div>
-                    <span className="text-xs text-yellow-400">
+                    <span className="text-xs text-orange-400">
                       {item.category}
                     </span>
 
-                    <h3 className="text-lg font-semibold mt-1 group-hover:text-yellow-300 transition">
+                    <h3 className="text-lg font-semibold mt-1 group-hover:text-orange-300 transition">
                       {item.q}
                     </h3>
                   </div>
 
-                  <span className="text-2xl text-yellow-400">
+                  <span className="text-2xl text-orange-400">
                     {openIndex === i ? "−" : "+"}
                   </span>
                 </div>
@@ -140,7 +140,7 @@ export default function FAQPage() {
           Talk to a traffic attorney today
         </p>
 
-        <button className="mt-6 px-8 py-4 bg-yellow-400 text-black font-bold rounded-2xl hover:scale-105 transition">
+        <button className="mt-6 px-8 py-4 bg-orange-400 text-black font-bold rounded-2xl hover:scale-105 transition">
           Contact Now
         </button>
       </div>

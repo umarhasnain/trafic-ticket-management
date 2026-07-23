@@ -42,7 +42,7 @@ const finalRelated =
           data-aos="fade-up"
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 font-semibold">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 font-semibold">
             <FaExclamationTriangle />
             Related Cases
           </span>
@@ -72,7 +72,7 @@ const finalRelated =
                 overflow-hidden
                 border
                 border-gray-200
-                hover:border-yellow-400
+                hover:border-orange-400
                 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
                 transition-all
                 duration-500
@@ -109,7 +109,7 @@ const finalRelated =
                       item.category ===
                       "Traffic Criminal Violation"
                         ? "bg-red-500 text-white"
-                        : "bg-yellow-400 text-black"
+                        : "bg-orange-400 text-black"
                     }
                   `}
                 >
@@ -121,7 +121,7 @@ const finalRelated =
 
               <div className="p-7">
 
-                <div className="flex items-center gap-2 text-yellow-500 mb-3">
+                <div className="flex items-center gap-2 text-orange-500 mb-3">
                   <FaGavel />
                   <span className="text-sm font-semibold">
                     Attorney Review Available
@@ -133,7 +133,7 @@ const finalRelated =
                     text-2xl
                     font-black
                     text-gray-900
-                    group-hover:text-yellow-600
+                    group-hover:text-orange-600
                     transition
                   "
                 >
@@ -151,7 +151,7 @@ const finalRelated =
                     items-center
                     gap-2
                     font-bold
-                    text-yellow-600
+                    text-orange-600
                   "
                 >
                   Learn More

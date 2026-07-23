@@ -46,9 +46,9 @@ export default function Results() {
               <div
                 key={index}
                 data-aos="fade-up"
-                className="p-8 rounded-3xl border border-gray-200 hover:border-yellow-400 hover:shadow-2xl transition"
+                className="p-8 rounded-3xl border border-gray-200 hover:border-orange-400 hover:shadow-2xl transition"
               >
-                <div className="w-16 h-16 rounded-2xl bg-yellow-100 flex items-center justify-center text-yellow-500 text-2xl">
+                <div className="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-500 text-2xl">
                   <Icon />
                 </div>
 

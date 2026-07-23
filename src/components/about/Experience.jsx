@@ -26,7 +26,7 @@ export default function Experience() {
               data-aos="zoom-in"
               className="bg-white/5 border border-white/10 rounded-3xl p-8 text-center"
             >
-              <h3 className="text-5xl font-black text-yellow-400">
+              <h3 className="text-5xl font-black text-orange-400">
                 {item.number}
               </h3>
 

@@ -84,13 +84,13 @@ export default function TrafficTicketWizard() {
           {/* progress bar */}
           <div className="w-full bg-slate-700 h-2 mt-4 rounded">
             <div
-              className="bg-yellow-400 h-2 rounded transition-all"
+              className="bg-orange-400 h-2 rounded transition-all"
               style={{ width: `${(step / 4) * 100}%` }}
             />
           </div>
 
           {category && (
-            <p className="mt-3 text-yellow-300 font-semibold">
+            <p className="mt-3 text-orange-300 font-semibold">
               Auto Classified: {category}
             </p>
           )}
@@ -217,7 +217,7 @@ export default function TrafficTicketWizard() {
           {step < 4 ? (
             <button
               onClick={nextStep}
-              className="px-6 py-2 bg-yellow-500 font-bold rounded"
+              className="px-6 py-2 bg-orange-500 font-bold rounded"
             >
               Next
             </button>

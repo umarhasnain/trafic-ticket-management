@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h2 className="text-4xl font-black">
               Traffic
-              <span className="text-yellow-400">
+              <span className="text-orange-400">
                 {" "}
                 Ticket
               </span>
@@ -36,7 +36,7 @@ export default function Footer() {
                 (Icon, i) => (
                   <button
                     key={i}
-                    className="w-11 h-11 rounded-full border border-yellow-400/30 flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all"
+                    className="w-11 h-11 rounded-full border border-orange-400/30 flex items-center justify-center hover:bg-orange-400 hover:text-black transition-all"
                   >
                     <Icon />
                   </button>
@@ -84,19 +84,19 @@ export default function Footer() {
 
             <div className="space-y-4 text-gray-400">
               <div className="flex gap-3 items-start">
-                <FaPhoneAlt className="text-yellow-400 mt-1" />
+                <FaPhoneAlt className="text-orange-400 mt-1" />
                 <span>(305) 442-0243</span>
               </div>
 
               <div className="flex gap-3 items-start">
-                <FaEnvelope className="text-yellow-400 mt-1" />
+                <FaEnvelope className="text-orange-400 mt-1" />
                 <span>
                   info@heretodefendyou.com
                 </span>
               </div>
 
               <div className="flex gap-3 items-start">
-                <FaMapMarkerAlt className="text-yellow-400 mt-1" />
+                <FaMapMarkerAlt className="text-orange-400 mt-1" />
                 <span>
                   122 Minorca Avenue,
                   <br />

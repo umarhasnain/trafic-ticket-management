@@ -36,10 +36,10 @@ export default function ViolationsGrid() {
                 px-4
                 py-2
                 rounded-full
-                bg-yellow-500/10
+                bg-orange-500/10
                 border
-                border-yellow-500/20
-                text-yellow-400
+                border-orange-500/20
+                text-orange-400
                 font-semibold
               "
             >
@@ -73,7 +73,7 @@ export default function ViolationsGrid() {
                   border
                   border-white/10
                   bg-white/3
-                  hover:border-yellow-500/50
+                  hover:border-orange-500/50
                   hover:-translate-y-2
                   hover:shadow-[0_20px_60px_rgba(250,204,21,0.12)]
                   transition-all
@@ -104,7 +104,7 @@ export default function ViolationsGrid() {
                       px-3
                       py-1
                       rounded-full
-                      bg-yellow-400
+                      bg-orange-400
                       text-black
                       text-xs
                       font-bold
@@ -122,7 +122,7 @@ export default function ViolationsGrid() {
                       text-xl
                       font-bold
                       text-white
-                      group-hover:text-yellow-400
+                      group-hover:text-orange-400
                       transition
                     "
                   >
@@ -139,7 +139,7 @@ export default function ViolationsGrid() {
                       flex
                       items-center
                       gap-2
-                      text-yellow-400
+                      text-orange-400
                       font-semibold
                     "
                   >

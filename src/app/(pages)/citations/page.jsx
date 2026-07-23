@@ -37,7 +37,7 @@ export default function CitationsPage() {
 
           {/* Option 2 */}
           <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-            <h2 className="text-2xl font-bold text-yellow-600">
+            <h2 className="text-2xl font-bold text-orange-600">
               Traffic School
             </h2>
             <p className="mt-4 text-gray-600 leading-7">
@@ -167,7 +167,7 @@ export default function CitationsPage() {
 
           <Link
             href="/contact"
-            className="inline-block mt-8 bg-yellow-500 text-black px-8 py-4 rounded-xl font-semibold"
+            className="inline-block mt-8 bg-orange-500 text-black px-8 py-4 rounded-xl font-semibold"
           >
             Contact Us
           </Link>

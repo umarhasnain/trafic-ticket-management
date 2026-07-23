@@ -31,7 +31,7 @@ export default function Testimonials() {
           data-aos="fade-up"
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 font-semibold">
+          <span className="px-4 py-2 rounded-full bg-orange-100 text-orange-700 font-semibold">
             TESTIMONIALS
           </span>
 
@@ -50,9 +50,9 @@ export default function Testimonials() {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 150}
-              className="group bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:border-yellow-400 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+              className="group bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:border-orange-400 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
             >
-              <div className="flex gap-1 text-yellow-400">
+              <div className="flex gap-1 text-orange-400">
                 <FaStar />
                 <FaStar />
                 <FaStar />
@@ -84,7 +84,7 @@ export default function Testimonials() {
               key={index}
               className="min-w-[300px] bg-white p-6 rounded-3xl shadow-lg border border-gray-200"
             >
-              <div className="flex gap-1 text-yellow-400">
+              <div className="flex gap-1 text-orange-400">
                 <FaStar />
                 <FaStar />
                 <FaStar />

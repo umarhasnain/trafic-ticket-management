@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   FaShieldAlt,
   FaLock,
@@ -38,15 +39,16 @@ const badges = [
 
 export default function TrustBadges() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent" />
+    <section className="relative overflow-hidden bg-white py-24">
+      <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
+        {/* Heading */}
         <div
           data-aos="fade-up"
-          className="text-center max-w-3xl mx-auto"
+          className="max-w-3xl mx-auto text-center"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 font-medium">
+          <span className="inline-block rounded-full bg-orange-100 px-4 py-2 font-medium text-orange-700">
             TRUSTED PLATFORM
           </span>
 
@@ -60,7 +62,46 @@ export default function TrustBadges() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6 mt-16">
+        {/* ================= HERO IMAGE ================= */}
+        <div
+          data-aos="zoom-in"
+          className="relative mt-14 mb-16 overflow-hidden rounded-[30px] shadow-2xl"
+        >
+          <Image
+            src="/assets/images/img1.png"
+            alt="Trusted Traffic Ticket Services"
+            width={1400}
+            height={700}
+            priority
+            className="h-[280px] md:h-[420px] w-full object-cover transition duration-700 hover:scale-105"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
+
+          {/* Content */}
+          <div className="absolute inset-0 flex items-center">
+            <div className="max-w-2xl px-8 md:px-14 text-white">
+              <span className="inline-block rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur">
+                ⭐ Trusted Since Day One
+              </span>
+
+              <h3 className="mt-5 text-3xl md:text-5xl font-black leading-tight">
+                Protect Your Driving Record With Confidence
+              </h3>
+
+              <p className="mt-5 text-base md:text-lg text-gray-200 leading-relaxed">
+                Our experienced traffic ticket professionals provide fast,
+                confidential, and reliable legal assistance to help drivers
+                resolve violations quickly and efficiently.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* ================= END HERO IMAGE ================= */}
+
+        {/* Trust Cards */}
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {badges.map((item, index) => {
             const Icon = item.icon;
 
@@ -69,9 +110,9 @@ export default function TrustBadges() {
                 key={index}
                 data-aos="zoom-in"
                 data-aos-delay={index * 100}
-                className="group bg-white border border-gray-200 rounded-3xl p-6 hover:border-yellow-400 hover:-translate-y-2 transition-all duration-500 shadow-sm hover:shadow-2xl"
+                className="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-orange-400 hover:shadow-2xl"
               >
-                <div className="w-16 h-16 rounded-2xl bg-yellow-100 flex items-center justify-center text-yellow-500 text-2xl group-hover:rotate-6 transition">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-100 text-2xl text-orange-500 transition group-hover:rotate-6">
                   <Icon />
                 </div>
 
@@ -79,7 +120,7 @@ export default function TrustBadges() {
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">
                   {item.desc}
                 </p>
               </div>

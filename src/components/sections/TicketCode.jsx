@@ -305,13 +305,13 @@ const handleChange = (e) => {
 
       {/* ================= HERO ================= */}
 
-  <section className="relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-yellow-600 text-white">
+  <section className="relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-orange-600 text-white">
 
   <div className="absolute inset-0 bg-black/40"></div>
 
   <div className="relative max-w-7xl mx-auto px-5 py-28">
 
-    <span className="inline-flex rounded-full bg-yellow-400 text-black px-5 py-2 font-bold">
+    <span className="inline-flex rounded-full bg-orange-400 text-black px-5 py-2 font-bold">
       Secure Online Ticket Submission
     </span>
 
@@ -319,7 +319,7 @@ const handleChange = (e) => {
 
       Submit Your
 
-      <span className="block text-yellow-400">
+      <span className="block text-orange-400">
         Traffic Citation
       </span>
 
@@ -339,11 +339,11 @@ const handleChange = (e) => {
 
 </section>
 
-<section className="py-16 bg-yellow-50">
+<section className="py-16 bg-orange-50">
 
 <div className="max-w-7xl mx-auto px-5">
 
-<div className="bg-white rounded-3xl border border-yellow-300 shadow-xl p-10">
+<div className="bg-white rounded-3xl border border-orange-300 shadow-xl p-10">
 
 <h2 className="text-4xl font-black">
 
@@ -417,7 +417,7 @@ Not Eligible
 
 <div className="text-center">
 
-<span className="inline-flex bg-yellow-100 text-yellow-700 rounded-full px-5 py-2 font-bold">
+<span className="inline-flex bg-orange-100 text-orange-700 rounded-full px-5 py-2 font-bold">
 
 Attorney Fees
 
@@ -441,7 +441,7 @@ Accident Citation
 
 </h3>
 
-<div className="text-5xl font-black text-yellow-500 mt-6">
+<div className="text-5xl font-black text-orange-500 mt-6">
 
 $150
 
@@ -457,7 +457,7 @@ Speeding Citation
 
 </h3>
 
-<div className="text-5xl font-black text-yellow-500 mt-6">
+<div className="text-5xl font-black text-orange-500 mt-6">
 
 $150
 
@@ -473,7 +473,7 @@ Other Infractions
 
 </h3>
 
-<div className="text-5xl font-black text-yellow-500 mt-6">
+<div className="text-5xl font-black text-orange-500 mt-6">
 
 $100
 
@@ -495,7 +495,7 @@ Additional Citations
 
 Each additional citation issued by the same officer during the same stop costs
 
-<span className="text-yellow-400 font-bold">
+<span className="text-orange-400 font-bold">
 
  $50
 
@@ -594,7 +594,7 @@ citationDate:e.target.value
 
 <button
 onClick={checkEligibility}
-className="bg-yellow-500 hover:bg-yellow-400 text-black px-10 py-4 rounded-xl font-bold"
+className="bg-orange-500 hover:bg-orange-400 text-black px-10 py-4 rounded-xl font-bold"
 >
 
 Check Eligibility
@@ -697,7 +697,7 @@ Call Our Office
                     duration-300
 
                     ${step >= item.id
-                        ? "bg-yellow-500 text-black shadow-lg"
+                        ? "bg-orange-500 text-black shadow-lg"
                         : "bg-gray-100 text-gray-500"
                       }
                     `}
@@ -715,7 +715,7 @@ Call Our Office
                     font-semibold
 
                     ${step >= item.id
-                        ? "text-yellow-600"
+                        ? "text-orange-600"
                         : "text-gray-400"
                       }
                     `}
@@ -988,9 +988,9 @@ Attorney Fee
 
 </label>
 
-<div className="mt-2 bg-yellow-50 border border-yellow-300 rounded-xl p-4">
+<div className="mt-2 bg-orange-50 border border-orange-300 rounded-xl p-4">
 
-<span className="text-3xl font-black text-yellow-600">
+<span className="text-3xl font-black text-orange-600">
 
 ${formData.attorneyFee}
 
@@ -1027,7 +1027,7 @@ ${formData.attorneyFee}
                   p-4
                   resize-none
                   outline-none
-                  focus:border-yellow-500
+                  focus:border-orange-500
                   "
                 />
 
@@ -1067,8 +1067,8 @@ ${formData.attorneyFee}
                   inline-flex
                   items-center
                   gap-2
-                  bg-yellow-500
-                  hover:bg-yellow-400
+                  bg-orange-500
+                  hover:bg-orange-400
                   text-black
                   px-8
                   py-4
@@ -1133,7 +1133,7 @@ ${formData.attorneyFee}
                     border
                     rounded-xl
                     p-4
-                    focus:border-yellow-500
+                    focus:border-orange-500
                     outline-none
                     "
                   />
@@ -1162,7 +1162,7 @@ ${formData.attorneyFee}
                     border
                     rounded-xl
                     p-4
-                    focus:border-yellow-500
+                    focus:border-orange-500
                     outline-none
                     "
                   />
@@ -1191,7 +1191,7 @@ ${formData.attorneyFee}
                     border
                     rounded-xl
                     p-4
-                    focus:border-yellow-500
+                    focus:border-orange-500
                     outline-none
                     "
                   />
@@ -1220,7 +1220,7 @@ ${formData.attorneyFee}
                     border
                     rounded-xl
                     p-4
-                    focus:border-yellow-500
+                    focus:border-orange-500
                     outline-none
                     "
                   />
@@ -1267,8 +1267,8 @@ ${formData.attorneyFee}
                   onClick={nextStep}
                   className="
                   flex items-center gap-2
-                  bg-yellow-500
-                  hover:bg-yellow-400
+                  bg-orange-500
+                  hover:bg-orange-400
                   text-black
                   px-8 py-4
                   rounded-xl
@@ -1320,7 +1320,7 @@ ${formData.attorneyFee}
                   p-10
                   text-center
                   cursor-pointer
-                  hover:border-yellow-500
+                  hover:border-orange-500
                   transition
                   "
                 >
@@ -1329,7 +1329,7 @@ ${formData.attorneyFee}
                     className="
                     text-5xl
                     mx-auto
-                    text-yellow-500
+                    text-orange-500
                     mb-4
                     "
                   />
@@ -1364,7 +1364,7 @@ ${formData.attorneyFee}
                   p-10
                   text-center
                   cursor-pointer
-                  hover:border-yellow-500
+                  hover:border-orange-500
                   transition
                   "
                 >
@@ -1373,7 +1373,7 @@ ${formData.attorneyFee}
                     className="
                     text-5xl
                     mx-auto
-                    text-yellow-500
+                    text-orange-500
                     mb-4
                     "
                   />
@@ -1423,8 +1423,8 @@ ${formData.attorneyFee}
                 <button
                   onClick={nextStep}
                   className="
-                  bg-yellow-500
-                  hover:bg-yellow-400
+                  bg-orange-500
+                  hover:bg-orange-400
                   px-8 py-4
                   rounded-xl
                   font-bold

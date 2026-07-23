@@ -76,7 +76,7 @@ export default function ViolationCategories() {
           data-aos="fade-up"
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="inline-block px-4 py-2 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-400">
+          <span className="inline-block px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400">
             VIOLATION TYPES
           </span>
 
@@ -98,9 +98,9 @@ export default function ViolationCategories() {
                 key={index}
                 data-aos="zoom-in"
                 data-aos-delay={index * 50}
-                className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-yellow-400 hover:-translate-y-2 transition-all duration-500"
+                className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-orange-400 hover:-translate-y-2 transition-all duration-500"
               >
-                <div className="w-16 h-16 rounded-2xl bg-yellow-400 text-black flex items-center justify-center text-2xl group-hover:scale-110 transition">
+                <div className="w-16 h-16 rounded-2xl bg-orange-400 text-black flex items-center justify-center text-2xl group-hover:scale-110 transition">
                   <Icon />
                 </div>
 

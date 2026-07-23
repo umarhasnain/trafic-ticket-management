@@ -204,7 +204,7 @@ export default function ContactTrafficTicketForm() {
           <div className="mt-10 text-center">
             <button
               type="submit"
-              className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-10 py-4 rounded-xl transition"
+              className="bg-orange-500 hover:bg-orange-600 text-black font-bold px-10 py-4 rounded-xl transition"
             >
               Submit
             </button>

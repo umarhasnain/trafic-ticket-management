@@ -80,7 +80,7 @@ export default function FAQ() {
                   {faq.question}
                 </span>
 
-                <span className="text-yellow-500">
+                <span className="text-orange-500">
                   {active === index ? (
                     <FaMinus />
                   ) : (

@@ -39,14 +39,14 @@ export default function Statistics() {
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           <div className="text-center p-8 rounded-3xl bg-white/5 border border-white/10">
-            <h3 className="text-5xl font-black text-yellow-400">
+            <h3 className="text-5xl font-black text-orange-400">
               <Counter end={10000} />+
             </h3>
             <p className="text-gray-400 mt-3">Cases Reviewed</p>
           </div>
 
           <div className="text-center p-8 rounded-3xl bg-white/5 border border-white/10">
-            <h3 className="text-5xl font-black text-yellow-400">
+            <h3 className="text-5xl font-black text-orange-400">
               <Counter end={95} />%
             </h3>
             <p className="text-gray-400 mt-3">
@@ -55,14 +55,14 @@ export default function Statistics() {
           </div>
 
           <div className="text-center p-8 rounded-3xl bg-white/5 border border-white/10">
-            <h3 className="text-5xl font-black text-yellow-400">
+            <h3 className="text-5xl font-black text-orange-400">
               24/7
             </h3>
             <p className="text-gray-400 mt-3">Support Available</p>
           </div>
 
           <div className="text-center p-8 rounded-3xl bg-white/5 border border-white/10">
-            <h3 className="text-5xl font-black text-yellow-400">
+            <h3 className="text-5xl font-black text-orange-400">
               <Counter end={50} />+
             </h3>
             <p className="text-gray-400 mt-3">Regions Served</p>
