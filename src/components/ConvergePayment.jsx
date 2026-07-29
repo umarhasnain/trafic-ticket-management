@@ -2,63 +2,63 @@
 
 export default function ConvergePayment({
 
-amount,
+  amount,
 
-onSuccess
+  onSuccess
 
-}){
+}) {
 
-const startPayment=async()=>{
+  const startPayment = async () => {
 
-const res=await fetch(
+    const res = await fetch(
 
-"/api/payment/token",
+      "/api/converge/token",
 
-{
+      {
 
-method:"POST",
+        method: "POST",
 
-headers:{
+        headers: {
 
-"Content-Type":"application/json"
+          "Content-Type": "application/json"
 
-},
+        },
 
-body:JSON.stringify({
+        body: JSON.stringify({
 
-amount
+          amount
 
-})
+        })
 
-}
+      }
 
-);
+    );
 
-const data=await res.json();
+    const data = await res.json();
 
-console.log(data);
+    console.log(data);
 
-/*
+    /*
+    
+    Next phase
+    
+    Load Converge.js
+    
+    Generate Hosted Payment
+    
+    */
 
-Next phase
+    onSuccess();
 
-Load Converge.js
+  };
 
-Generate Hosted Payment
+  return (
 
-*/
+    <button
 
-onSuccess();
+      onClick={startPayment}
 
-};
-
-return(
-
-<button
-
-onClick={startPayment}
-
-className="
+      className="
 
 w-full
 
@@ -74,12 +74,12 @@ font-bold
 
 "
 
->
+    >
 
-Pay ${amount}
+      Pay ${amount}
 
-</button>
+    </button>
 
-);
+  );
 
 }

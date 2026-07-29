@@ -889,6 +889,7 @@ export default function SubmitTicketPage() {
 
       return false;
     }
+    setEligible(true);
     return true;
 
   };
@@ -2669,14 +2670,14 @@ export default function SubmitTicketPage() {
                       <div className="flex justify-between">
                         <span>County</span>
                         <span className="font-semibold">
-                          {eligibility.county}
+                          {formData.county}
                         </span>
                       </div>
 
                       <div className="flex justify-between">
                         <span>Date</span>
                         <span className="font-semibold">
-                          {eligibility.citationDate}
+                          {formData.issueDate}
                         </span>
                       </div>
 
@@ -2698,49 +2699,41 @@ export default function SubmitTicketPage() {
 
                     <div className="space-y-4">
 
-                      <div className="flex justify-between">
-                        <span>Attorney Fee</span>
-                        <span className="font-bold">
-                          ${formData.attorneyFee}
-                        </span>
-                      </div>
+                      {(() => {
+                        const citationsCount = Number(formData.citationsCount) || 1;
+                        const additionalFee =
+                          citationsCount > 1 ? (citationsCount - 1) * 50 : 0;
+                        const baseFee = formData.attorneyFee - additionalFee;
 
-                      {Number(formData.numberOfCitations) > 1 && (
+                        return (
+                          <>
+                            <div className="flex justify-between">
+                              <span>Attorney Fee</span>
+                              <span className="font-bold">
+                                ${baseFee}
+                              </span>
+                            </div>
 
-                        <div className="flex justify-between">
+                            {citationsCount > 1 && (
+                              <div className="flex justify-between">
+                                <span>Additional Citation Fee</span>
+                                <span className="font-bold">
+                                  ${additionalFee}
+                                </span>
+                              </div>
+                            )}
 
-                          <span>
-                            Additional Citation Fee
-                          </span>
+                            <hr />
 
-                          <span className="font-bold">
-                            $
-                            {(Number(formData.numberOfCitations) - 1) * 50}
-                          </span>
-
-                        </div>
-
-                      )}
-
-                      <hr />
-
-                      <div className="flex justify-between text-2xl font-black">
-
-                        <span>Total</span>
-
-                        <span className="text-orange-600">
-
-                          $
-
-                          {formData?.attorneyFee +
-                            Math.max(
-                              Number(formData?.numberOfCitations) - 1,
-                              0
-                            ) * 50}
-
-                        </span>
-
-                      </div>
+                            <div className="flex justify-between text-2xl font-black">
+                              <span>Total</span>
+                              <span className="text-orange-600">
+                                ${formData.attorneyFee}
+                              </span>
+                            </div>
+                          </>
+                        );
+                      })()}
 
                     </div>
 
