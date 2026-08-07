@@ -39,7 +39,7 @@ const badges = [
 
 export default function TrustBadges() {
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-white dark:bg-zinc-950 py-24 transition-colors duration-500">
       <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
@@ -48,15 +48,15 @@ export default function TrustBadges() {
           data-aos="fade-up"
           className="max-w-3xl mx-auto text-center"
         >
-          <span className="inline-block rounded-full bg-orange-100 px-4 py-2 font-medium text-orange-700">
+          <span className="inline-block rounded-full bg-orange-100 dark:bg-orange-500/10 px-4 py-2 font-medium text-orange-700 dark:text-orange-300">
             TRUSTED PLATFORM
           </span>
 
-          <h2 className="mt-5 text-4xl lg:text-5xl font-black text-gray-900">
+          <h2 className="mt-5 text-4xl lg:text-5xl font-black text-gray-900 dark:text-white">
             Trusted By Drivers Across The Country
           </h2>
 
-          <p className="mt-5 text-lg text-gray-600">
+          <p className="mt-5 text-lg text-gray-600 dark:text-gray-400">
             Fast, secure and professional assistance for traffic
             citations and violations.
           </p>
@@ -110,17 +110,17 @@ export default function TrustBadges() {
                 key={index}
                 data-aos="zoom-in"
                 data-aos-delay={index * 100}
-                className="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-orange-400 hover:shadow-2xl"
+                className="group rounded-3xl border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-orange-400 hover:shadow-2xl"
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-100 text-2xl text-orange-500 transition group-hover:rotate-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-100 dark:bg-orange-500/10 text-2xl text-orange-500 transition group-hover:rotate-6">
                   <Icon />
                 </div>
 
-                <h3 className="mt-5 text-lg font-bold text-gray-900">
+                <h3 className="mt-5 text-lg font-bold text-gray-900 dark:text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                <p className="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                   {item.desc}
                 </p>
               </div>

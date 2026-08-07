@@ -8,9 +8,9 @@ export const metadata = {
 
 export default function CitationsPage() {
   return (
-    <main className="bg-slate-50 min-h-screen">
+    <main className="bg-slate-50 dark:bg-zinc-950 min-h-screen transition-colors duration-500">
       {/* HERO */}
-      <section className="bg-slate-900 text-white py-20">
+      <section className="bg-slate-900 dark:bg-black text-white py-20">
         <div className="max-w-6xl mx-auto px-6">
           <h1 className="text-5xl font-bold">
             Citations
@@ -26,31 +26,31 @@ export default function CitationsPage() {
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
           {/* Option 1 */}
-          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-            <h2 className="text-2xl font-bold text-red-600">
+          <div className="bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow hover:shadow-xl transition">
+            <h2 className="text-2xl font-bold text-red-600 dark:text-red-400">
               Pay the Fine
             </h2>
-            <p className="mt-4 text-gray-600 leading-7">
+            <p className="mt-4 text-gray-600 dark:text-gray-400 leading-7">
               This is the worst option. You will receive an automatic guilty finding and an adjudication (points on your driving record). This may lead to insurance increases, and possible license suspension. You may be marked as a habitual traffic offender.
             </p>
           </div>
 
           {/* Option 2 */}
-          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-            <h2 className="text-2xl font-bold text-orange-600">
+          <div className="bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow hover:shadow-xl transition">
+            <h2 className="text-2xl font-bold text-orange-600 dark:text-orange-400">
               Traffic School
             </h2>
-            <p className="mt-4 text-gray-600 leading-7">
+            <p className="mt-4 text-gray-600 dark:text-gray-400 leading-7">
               No points will be assessed but your driving record will still reflect the violation. You may not be eligible and will need to pay fees and spend time completing the course.
             </p>
           </div>
 
           {/* Option 3 */}
-          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition border-2 border-green-500">
-            <h2 className="text-2xl font-bold text-green-600">
+          <div className="bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow hover:shadow-xl transition border-2 border-green-500 dark:border-green-500/60">
+            <h2 className="text-2xl font-bold text-green-600 dark:text-green-400">
               Request a Trial
             </h2>
-            <p className="mt-4 text-gray-600 leading-7">
+            <p className="mt-4 text-gray-600 dark:text-gray-400 leading-7">
               This is the only option where, if successful, your record will not be marked. You avoid fines, points, and traffic school. You may also negotiate a plea.
             </p>
           </div>
@@ -58,9 +58,9 @@ export default function CitationsPage() {
       </section>
 
       {/* NOTICE */}
-      <section className="bg-white py-16">
-        <div className="max-w-4xl mx-auto px-6 text-gray-700 leading-7">
-          <h2 className="text-3xl font-bold mb-4">
+      <section className="bg-white dark:bg-zinc-900 py-16">
+        <div className="max-w-4xl mx-auto px-6 text-gray-700 dark:text-gray-300 leading-7">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
             Suspended License Notice
           </h2>
 
@@ -71,7 +71,7 @@ export default function CitationsPage() {
           <div className="mt-6">
             <a
               href="tel:3054420243"
-              className="inline-block bg-slate-900 text-white px-6 py-3 rounded-xl font-semibold"
+              className="inline-block bg-slate-900 dark:bg-orange-500 text-white dark:text-black px-6 py-3 rounded-xl font-semibold"
             >
               Call: (305) 442-0243
             </a>
@@ -80,14 +80,14 @@ export default function CitationsPage() {
       </section>
 
       {/* INFRACTION LIST */}
-      <section className="py-20 bg-slate-100">
+      <section className="py-20 bg-slate-100 dark:bg-zinc-950">
         <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-4xl font-bold mb-10">
+          <h2 className="text-4xl font-bold mb-10 text-gray-900 dark:text-white">
             Traffic Infraction Violations
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+          <div className="grid md:grid-cols-2 gap-4 text-gray-700 dark:text-gray-300">
             {[
               "Careless driving",
               "Child restraint",
@@ -111,7 +111,7 @@ export default function CitationsPage() {
             ].map((item) => (
               <div
                 key={item}
-                className="bg-white p-4 rounded-lg shadow-sm"
+                className="bg-white dark:bg-zinc-900 p-4 rounded-lg shadow-sm"
               >
                 {item}
               </div>
@@ -121,14 +121,14 @@ export default function CitationsPage() {
       </section>
 
       {/* CRIMINAL LIST */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-zinc-900">
         <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-4xl font-bold mb-10 text-red-600">
+          <h2 className="text-4xl font-bold mb-10 text-red-600 dark:text-red-400">
             Traffic Criminal Violations
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+          <div className="grid md:grid-cols-2 gap-4 text-gray-700 dark:text-gray-300">
             {[
               "DUI",
               "Driving while license suspended knowingly",
@@ -145,7 +145,7 @@ export default function CitationsPage() {
             ].map((item) => (
               <div
                 key={item}
-                className="bg-slate-100 p-4 rounded-lg shadow-sm"
+                className="bg-slate-100 dark:bg-zinc-950 p-4 rounded-lg shadow-sm"
               >
                 {item}
               </div>
@@ -155,7 +155,7 @@ export default function CitationsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-slate-900 text-white py-20">
+      <section className="bg-slate-900 dark:bg-black text-white py-20">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-4xl font-bold">
             Hire Legal Help Today

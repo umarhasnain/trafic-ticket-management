@@ -42,22 +42,22 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="py-24 bg-white overflow-hidden"
+      className="py-24 bg-white dark:bg-zinc-950 overflow-hidden transition-colors duration-500"
     >
       <div className="max-w-5xl mx-auto px-5 lg:px-8">
         <div
           data-aos="fade-up"
           className="text-center"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 font-semibold">
+          <span className="inline-block px-4 py-2 rounded-full bg-yellow-100 dark:bg-yellow-500/10 text-yellow-700 dark:text-yellow-300 font-semibold">
             FAQ
           </span>
 
-          <h2 className="mt-6 text-4xl lg:text-5xl font-black text-gray-900">
+          <h2 className="mt-6 text-4xl lg:text-5xl font-black text-gray-900 dark:text-white">
             Frequently Asked Questions
           </h2>
 
-          <p className="mt-5 text-lg text-gray-600">
+          <p className="mt-5 text-lg text-gray-600 dark:text-gray-400">
             Everything you need to know before submitting your ticket.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function FAQ() {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="border border-gray-200 rounded-3xl overflow-hidden bg-white shadow-sm"
+              className="border border-gray-200 dark:border-zinc-800 rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 shadow-sm"
             >
               <button
                 onClick={() =>
@@ -76,11 +76,11 @@ export default function FAQ() {
                 }
                 className="w-full flex justify-between items-center text-left p-6 lg:p-7"
               >
-                <span className="font-bold text-gray-900 text-lg">
+                <span className="font-bold text-gray-900 dark:text-white text-lg">
                   {faq.question}
                 </span>
 
-                <span className="text-orange-500">
+                <span className="text-orange-500 dark:text-orange-400">
                   {active === index ? (
                     <FaMinus />
                   ) : (
@@ -96,7 +96,7 @@ export default function FAQ() {
                     : "max-h-0"
                 }`}
               >
-                <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
                   {faq.answer}
                 </div>
               </div>

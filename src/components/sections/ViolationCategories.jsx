@@ -68,7 +68,7 @@ const violations = [
 
 export default function ViolationCategories() {
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
+    <section className="py-24 bg-gray-50 dark:bg-black relative overflow-hidden transition-colors duration-500">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#facc1520,transparent_50%)]" />
 
       <div className="max-w-7xl mx-auto px-5 lg:px-8 relative z-10">
@@ -76,15 +76,15 @@ export default function ViolationCategories() {
           data-aos="fade-up"
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="inline-block px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400">
+          <span className="inline-block px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-600 dark:text-orange-400">
             VIOLATION TYPES
           </span>
 
-          <h2 className="mt-5 text-4xl lg:text-5xl font-black text-white">
+          <h2 className="mt-5 text-4xl lg:text-5xl font-black text-gray-900 dark:text-white">
             Traffic Violations We Handle
           </h2>
 
-          <p className="mt-5 text-lg text-gray-400">
+          <p className="mt-5 text-lg text-gray-600 dark:text-gray-400">
             Professional support for a wide range of traffic citations.
           </p>
         </div>
@@ -98,17 +98,17 @@ export default function ViolationCategories() {
                 key={index}
                 data-aos="zoom-in"
                 data-aos-delay={index * 50}
-                className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-orange-400 hover:-translate-y-2 transition-all duration-500"
+                className="group bg-black/5 dark:bg-white/5 backdrop-blur-xl border border-black/10 dark:border-white/10 rounded-3xl p-6 hover:border-orange-400 hover:-translate-y-2 transition-all duration-500"
               >
                 <div className="w-16 h-16 rounded-2xl bg-orange-400 text-black flex items-center justify-center text-2xl group-hover:scale-110 transition">
                   <Icon />
                 </div>
 
-                <h3 className="mt-5 text-lg font-bold text-white">
+                <h3 className="mt-5 text-lg font-bold text-gray-900 dark:text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-gray-400 text-sm leading-relaxed">
+                <p className="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                   Get assistance and professional review for this
                   violation category.
                 </p>

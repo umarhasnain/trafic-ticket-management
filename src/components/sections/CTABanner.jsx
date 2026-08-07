@@ -4,7 +4,7 @@ import { FaArrowRight, FaPhoneAlt } from "react-icons/fa";
 
 export default function CTABanner() {
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
+    <section className="py-24 bg-gray-50 dark:bg-black relative overflow-hidden transition-colors duration-500">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#facc1540,transparent_60%)]" />
 
       <div className="max-w-7xl mx-auto px-5 lg:px-8 relative z-10">
@@ -14,7 +14,7 @@ export default function CTABanner() {
         >
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <span className="inline-block bg-black/10 px-4 py-2 rounded-full font-semibold">
+              <span className="inline-block bg-black/10 px-4 py-2 rounded-full font-semibold text-black">
                 TAKE ACTION NOW
               </span>
 

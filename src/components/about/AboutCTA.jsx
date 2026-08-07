@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutCTA() {
   return (
-    <section className="py-24 bg-black">
+    <section className="py-24 bg-gray-50 dark:bg-black transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-5 lg:px-8">
         <div className="bg-linear-to-r from-orange-400 to-orange-500 rounded-[40px] p-12 lg:p-20 text-center">
           <h2 className="text-5xl font-black text-black">

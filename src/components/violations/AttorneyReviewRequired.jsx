@@ -61,16 +61,15 @@
 //   );
 // }
 
-
 export default function AttorneyReviewRequired() {
   return (
-    <section className="py-20 bg-slate-950 text-white">
-      <div className="max-w-5xl mx-auto text-center px-6">
-        <h2 className="text-4xl font-bold mb-6">
+    <section className="transition-colors duration-300">
+      <div>
+        <h2 className="text-gray-900 dark:text-white transition-colors duration-300">
           Attorney Review Recommended
         </h2>
 
-        <p className="text-slate-300 text-lg">
+        <p className="text-slate-600 dark:text-slate-300 text-lg transition-colors duration-300">
           Every violation can have different legal
           consequences. A professional review may help
           identify opportunities to reduce penalties.

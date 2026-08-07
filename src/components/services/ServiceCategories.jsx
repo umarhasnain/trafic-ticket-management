@@ -5,22 +5,24 @@ import { FaCar, FaGavel } from "react-icons/fa";
 
 export default function ServiceCategories() {
   return (
-    <section className="py-24 bg-black">
+    <section className="py-24 bg-gray-50 dark:bg-black transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-5">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-black">Legal Services We Provide</h2>
+          <h2 className="text-5xl font-black text-gray-900 dark:text-white">
+            Legal Services We Provide
+          </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
           <div
             data-aos="fade-right"
-            className="rounded-4xl bg-white text-black p-10"
+            className="rounded-4xl bg-white text-black p-10 border border-gray-200 dark:border-transparent"
           >
             <FaCar className="text-orange-400 text-5xl" />
 
             <h3 className="text-3xl font-black mt-6">Traffic Infractions</h3>
 
-            <p className="mt-4 text-gray-400">
+            <p className="mt-4 text-gray-600">
               Speeding tickets, red lights, seat belts, lane violations and many
               more traffic citations.
             </p>

@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#050505] text-white overflow-hidden">
+    <footer className="bg-gray-100 dark:bg-[#050505] text-gray-900 dark:text-white overflow-hidden transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-5 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
@@ -25,7 +25,7 @@ export default function Footer() {
               </span>
             </h2>
 
-            <p className="mt-5 text-gray-400 max-w-md leading-relaxed">
+            <p className="mt-5 text-gray-600 dark:text-gray-400 max-w-md leading-relaxed">
               Helping drivers submit traffic tickets quickly and
               receive professional guidance through a secure and
               streamlined process.
@@ -36,7 +36,7 @@ export default function Footer() {
                 (Icon, i) => (
                   <button
                     key={i}
-                    className="w-11 h-11 rounded-full border border-orange-400/30 flex items-center justify-center hover:bg-orange-400 hover:text-black transition-all"
+                    className="w-11 h-11 rounded-full border border-orange-500/30 dark:border-orange-400/30 flex items-center justify-center hover:bg-orange-400 hover:text-black transition-all"
                   >
                     <Icon />
                   </button>
@@ -51,7 +51,7 @@ export default function Footer() {
               Company
             </h3>
 
-            <div className="space-y-3 text-gray-400">
+            <div className="space-y-3 text-gray-600 dark:text-gray-400">
               <Link href="/">About Us</Link>
               <br />
               <Link href="/">Contact</Link>
@@ -68,7 +68,7 @@ export default function Footer() {
               Services
             </h3>
 
-            <div className="space-y-3 text-gray-400">
+            <div className="space-y-3 text-gray-600 dark:text-gray-400">
               <p>Traffic Tickets</p>
               <p>Case Reviews</p>
               <p>Legal Referrals</p>
@@ -82,21 +82,21 @@ export default function Footer() {
               Contact
             </h3>
 
-            <div className="space-y-4 text-gray-400">
+            <div className="space-y-4 text-gray-600 dark:text-gray-400">
               <div className="flex gap-3 items-start">
-                <FaPhoneAlt className="text-orange-400 mt-1" />
+                <FaPhoneAlt className="text-orange-500 dark:text-orange-400 mt-1" />
                 <span>(305) 442-0243</span>
               </div>
 
               <div className="flex gap-3 items-start">
-                <FaEnvelope className="text-orange-400 mt-1" />
+                <FaEnvelope className="text-orange-500 dark:text-orange-400 mt-1" />
                 <span>
                   info@heretodefendyou.com
                 </span>
               </div>
 
               <div className="flex gap-3 items-start">
-                <FaMapMarkerAlt className="text-orange-400 mt-1" />
+                <FaMapMarkerAlt className="text-orange-500 dark:text-orange-400 mt-1" />
                 <span>
                   122 Minorca Avenue,
                   <br />
@@ -108,7 +108,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-white/10 my-10" />
+        <div className="h-px bg-black/10 dark:bg-white/10 my-10" />
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">

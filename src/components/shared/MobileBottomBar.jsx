@@ -13,10 +13,12 @@ export default function MobileBottomBar() {
         left-0
         right-0
         z-[999]
-        bg-black/95
+        bg-white/95
+        dark:bg-black/95
         backdrop-blur-xl
         border-t
-        border-yellow-500/20
+        border-gray-200
+        dark:border-yellow-500/20
         p-3
       "
     >
@@ -44,8 +46,10 @@ export default function MobileBottomBar() {
           <button
             className="
             border
-            border-yellow-400
-            text-yellow-400
+            border-yellow-500
+            dark:border-yellow-400
+            text-yellow-600
+            dark:text-yellow-400
             py-3
             px-4
             rounded-xl

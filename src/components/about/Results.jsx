@@ -28,11 +28,11 @@ const results = [
 
 export default function Results() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white dark:bg-zinc-950 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-black text-gray-900">
+          <h2 className="text-5xl font-black text-gray-900 dark:text-white">
             Proven Results
           </h2>
         </div>
@@ -46,13 +46,13 @@ export default function Results() {
               <div
                 key={index}
                 data-aos="fade-up"
-                className="p-8 rounded-3xl border border-gray-200 hover:border-orange-400 hover:shadow-2xl transition"
+                className="p-8 rounded-3xl border border-gray-200 dark:border-zinc-800 hover:border-orange-400 hover:shadow-2xl transition"
               >
-                <div className="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-500 text-2xl">
+                <div className="w-16 h-16 rounded-2xl bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center text-orange-500 text-2xl">
                   <Icon />
                 </div>
 
-                <h3 className="mt-6 font-bold text-xl">
+                <h3 className="mt-6 font-bold text-xl text-gray-900 dark:text-white">
                   {item.title}
                 </h3>
               </div>

@@ -1,18 +1,3 @@
-// import ContactTrafficTicketForm from '@/components/ContactTrafficTicketForm'
-// import TrafficTicketWizard from '@/components/TrafficTicketWizard'
-// import React from 'react'
-
-// const page = () => {
-//   return (
-//     <div>
-//       {/* <ContactTrafficTicketForm /> */}
-//       <TrafficTicketWizard />
-//     </div>
-//   )
-// }
-
-// export default page
-
 "use client";
 
 import { useState } from "react";
@@ -24,9 +9,7 @@ import {
   FaClock,
 } from "react-icons/fa";
 
-
 export default function ContactPage() {
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -35,7 +18,6 @@ export default function ContactPage() {
     message: "",
   });
 
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -43,21 +25,17 @@ export default function ContactPage() {
     });
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
 
     Swal.fire({
       icon: "success",
       title: "Message Sent Successfully",
-      text:
-        "Our traffic attorneys will contact you shortly.",
+      text: "Our traffic attorneys will contact you shortly.",
       confirmButtonColor: "#EAB308",
       background: "#111827",
       color: "#fff",
     });
-
 
     setFormData({
       name: "",
@@ -68,20 +46,22 @@ export default function ContactPage() {
     });
   };
 
-
   return (
-    <main className="bg-gray-50">
-
+    <main className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
 
       {/* HERO */}
 
       <section
         className="
-        bg-black
-        text-white
-        py-24
-        text-center
-      "
+          bg-gray-50
+          dark:bg-black
+          text-gray-900
+          dark:text-white
+          py-24
+          text-center
+          transition-colors
+          duration-300
+        "
       >
         <div className="max-w-7xl mx-auto px-5">
 
@@ -89,13 +69,11 @@ export default function ContactPage() {
             Home / Contact
           </p>
 
-
           <h1 className="text-5xl md:text-6xl font-black mt-5">
             Contact Our Traffic Attorneys
           </h1>
 
-
-          <p className="text-gray-300 max-w-3xl mx-auto mt-6">
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mt-6 transition-colors duration-300">
             Have questions about your traffic ticket?
             Our experienced legal team is here to
             guide you through every step of your case.
@@ -107,19 +85,18 @@ export default function ContactPage() {
 
       {/* CONTACT INFO */}
 
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-black transition-colors duration-300">
 
         <div
           className="
-          max-w-7xl 
-          mx-auto 
-          px-5 
-          grid 
-          md:grid-cols-4 
-          gap-6
-        "
+            max-w-7xl
+            mx-auto
+            px-5
+            grid
+            md:grid-cols-4
+            gap-6
+          "
         >
-
 
           {[
             {
@@ -137,7 +114,8 @@ export default function ContactPage() {
             {
               icon: <FaMapMarkerAlt />,
               title: "Office",
-              value: "122 Minorca Avenue,Coral Gables, FL 33134",
+              value:
+                "122 Minorca Avenue,Coral Gables, FL 33134",
             },
 
             {
@@ -145,54 +123,56 @@ export default function ContactPage() {
               title: "Hours",
               value: "Mon - Fri: 9AM - 6PM",
             },
-
           ].map((item, index) => (
 
             <div
               key={index}
               data-aos="zoom-in"
               className="
-              bg-white
-              rounded-3xl
-              p-8
-              text-center
-              shadow-lg
-              hover:-translate-y-2
-              transition
-            "
+                bg-gray-50
+                dark:bg-white/5
+                rounded-3xl
+                p-8
+                text-center
+                shadow-lg
+                dark:shadow-none
+                border
+                border-gray-200
+                dark:border-white/10
+                hover:-translate-y-2
+                transition-all
+                duration-300
+              "
             >
 
               <div
                 className="
-                w-16 h-16
-                bg-orange-400
-                text-black
-                rounded-full
-                flex
-                items-center
-                justify-center
-                text-2xl
-                mx-auto
-                mb-5
-              "
+                  w-16 h-16
+                  bg-orange-400
+                  text-black
+                  rounded-full
+                  flex
+                  items-center
+                  justify-center
+                  text-2xl
+                  mx-auto
+                  mb-5
+                "
               >
                 {item.icon}
               </div>
 
-
-              <h3 className="font-black text-xl">
+              <h3 className="font-black text-xl text-gray-900 dark:text-white transition-colors duration-300">
                 {item.title}
               </h3>
 
-
-              <p className="text-gray-500 mt-3">
+              <p className="text-gray-500 dark:text-gray-400 mt-3 transition-colors duration-300">
                 {item.value}
               </p>
 
             </div>
 
           ))}
-
 
         </div>
 
@@ -201,78 +181,90 @@ export default function ContactPage() {
 
       {/* FORM + OFFICE */}
 
-      <section className="pb-24">
+      <section className="pb-24 bg-white dark:bg-black transition-colors duration-300">
 
         <div
           className="
-          max-w-7xl 
-          mx-auto 
-          px-5
-          grid 
-          lg:grid-cols-2 
-          gap-10
-        "
+            max-w-7xl
+            mx-auto
+            px-5
+            grid
+            lg:grid-cols-2
+            gap-10
+          "
         >
-
 
           {/* FORM */}
 
           <div
             data-aos="fade-right"
             className="
-            bg-white
-            rounded-3xl
-            p-8
-            shadow-xl
-          "
+              bg-gray-50
+              dark:bg-white/5
+              rounded-3xl
+              p-8
+              shadow-xl
+              dark:shadow-none
+              border
+              border-gray-200
+              dark:border-white/10
+              transition-all
+              duration-300
+            "
           >
 
-            <h2 className="text-3xl font-black">
+            <h2 className="text-3xl font-black text-gray-900 dark:text-white transition-colors duration-300">
               Send Us a Message
             </h2>
-
 
             <form
               onSubmit={handleSubmit}
               className="space-y-5 mt-8"
             >
 
-              {
-                [
-                  "name",
-                  "email",
-                  "phone",
-                  "subject",
-                ].map((field) => (
+              {[
+                "name",
+                "email",
+                "phone",
+                "subject",
+              ].map((field) => (
 
-                  <input
-                    key={field}
-                    type={
-                      field === "email"
-                        ? "email"
-                        : "text"
-                    }
-                    name={field}
-                    value={formData[field]}
-                    onChange={handleChange}
-                    placeholder={
-                      field.charAt(0).toUpperCase() +
-                      field.slice(1)
-                    }
-                    required
-                    className="
+                <input
+                  key={field}
+                  type={
+                    field === "email"
+                      ? "email"
+                      : "text"
+                  }
+                  name={field}
+                  value={formData[field]}
+                  onChange={handleChange}
+                  placeholder={
+                    field.charAt(0).toUpperCase() +
+                    field.slice(1)
+                  }
+                  required
+                  className="
                     w-full
                     p-4
                     rounded-xl
                     border
+                    border-gray-300
+                    dark:border-white/20
+                    bg-white
+                    dark:bg-black/20
+                    text-gray-900
+                    dark:text-white
+                    placeholder:text-gray-500
+                    dark:placeholder:text-gray-400
                     outline-none
                     focus:border-orange-500
+                    transition-all
+                    duration-300
                   "
-                  />
+                />
 
-                ))
-              }
-
+              ))}
 
               <textarea
                 name="message"
@@ -282,31 +274,38 @@ export default function ContactPage() {
                 required
                 placeholder="Tell us about your traffic ticket..."
                 className="
-                w-full
-                p-4
-                rounded-xl
-                border
-                outline-none
-                focus:border-orange-500
-              "
+                  w-full
+                  p-4
+                  rounded-xl
+                  border
+                  border-gray-300
+                  dark:border-white/20
+                  bg-white
+                  dark:bg-black/20
+                  text-gray-900
+                  dark:text-white
+                  placeholder:text-gray-500
+                  dark:placeholder:text-gray-400
+                  outline-none
+                  focus:border-orange-500
+                  transition-all
+                  duration-300
+                "
               />
-
 
               <button
                 className="
-                w-full
-                bg-orange-400
-                hover:bg-orange-500
-                text-black
-                py-4
-                rounded-xl
-                font-black
-                transition
-              "
+                  w-full
+                  bg-orange-400
+                  hover:bg-orange-500
+                  text-black
+                  py-4
+                  rounded-xl
+                  font-black
+                  transition
+                "
               >
-
                 Submit Message
-
               </button>
 
             </form>
@@ -319,55 +318,55 @@ export default function ContactPage() {
           <div
             data-aos="fade-left"
             className="
-            bg-black
-            text-white
-            rounded-3xl
-            p-10
-            flex
-            flex-col
-            justify-center
-          "
+              bg-gray-100
+              dark:bg-black
+              text-gray-900
+              dark:text-white
+              rounded-3xl
+              p-10
+              flex
+              flex-col
+              justify-center
+              border
+              border-gray-200
+              dark:border-white/10
+              transition-all
+              duration-300
+            "
           >
 
             <span className="text-orange-400 font-bold">
               Need Immediate Help?
             </span>
 
-
-            <h2 className="text-5xl font-black mt-4">
+            <h2 className="text-5xl font-black mt-4 text-gray-900 dark:text-white transition-colors duration-300">
               Speak With A Traffic Attorney Today
             </h2>
 
-
-            <p className="text-gray-300 mt-6">
+            <p className="text-gray-600 dark:text-gray-300 mt-6 transition-colors duration-300">
               Don't wait until your ticket affects
               your record or insurance.
               Get professional legal guidance now.
             </p>
 
-
             <a
               href="tel:+13054420243"
               className="
-              mt-10
-              bg-orange-400
-              text-black
-              text-center
-              py-4
-              rounded-xl
-              font-black
-              hover:bg-orange-500
-              transition
-            "
+                mt-10
+                bg-orange-400
+                text-black
+                text-center
+                py-4
+                rounded-xl
+                font-black
+                hover:bg-orange-500
+                transition
+              "
             >
-
               Call (305) 442-0243
-
             </a>
 
-
           </div>
-
 
         </div>
 
@@ -386,7 +385,6 @@ export default function ContactPage() {
         />
 
       </section>
-
 
     </main>
   );
