@@ -19,11 +19,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Image
-              src="/assets/images/tlf-logo-3d.png"
+              src="/assets/images/tlf-icon.png"
               alt="The Traffic Law Firm"
               width={180}
               height={65}
-              className="h-16 w-auto object-contain brightness-0 invert"
+              className="h-16 w-auto object-contain"
             />
 
             <p className="mt-5 text-white/60 max-w-md leading-relaxed">
@@ -91,8 +91,8 @@ export default function Footer() {
 
               <div className="flex gap-3 items-start">
                 <FaEnvelope className="text-brand-gold mt-1" />
-                <a href="mailto:info@heretodefendyou.com" className="hover:text-brand-gold transition-colors text-sm">     
-                  info@heretodefendyou.com
+                <a href="mailto:thetrafficlawfirm@gmail.com" className="hover:text-brand-gold transition-colors text-sm">     
+                  thetrafficlawfirm@gmail.com
                 </a>
               </div>
 

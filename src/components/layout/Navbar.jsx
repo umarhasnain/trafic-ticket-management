@@ -171,10 +171,10 @@ export default function Navbar() {
             </a>
             <span className="text-white/50">|</span>
             <a
-              href="mailto:THETRAFFICLAWFIRM@GMAIL.COM"
+              href="mailto:thetrafficlawfirm@gmail.com"
               className="hover:text-brand-gold transition-colors"
             >
-              THETRAFFICLAWFIRM@GMAIL.COM
+             thetrafficlawfirm@gmail.com 
             </a>
           </div>
           <div className="flex items-center gap-4">
