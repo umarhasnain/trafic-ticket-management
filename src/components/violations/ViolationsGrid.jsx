@@ -34,10 +34,10 @@ export default function ViolationsGrid() {
               px-4
               py-2
               rounded-full
-              bg-orange-500/10
+              bg-brand-gold/10
               border
-              border-orange-500/20
-              text-orange-400
+              border-brand-gold/20
+              text-brand-gold
               font-semibold
             "
           >
@@ -45,11 +45,11 @@ export default function ViolationsGrid() {
             CATEGORY A
           </span>
 
-          <h2 className="mt-6 text-4xl lg:text-6xl font-black text-gray-900 dark:text-white transition-colors duration-300">
+          <h2 className="mt-6 text-4xl lg:text-6xl font-black text-gray-900  transition-colors duration-300">
             Traffic Infractions
           </h2>
 
-          <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto transition-colors duration-300">
+          <p className="mt-4 text-gray-600  max-w-3xl mx-auto transition-colors duration-300">
             Common traffic citations that may impact your
             driving record, insurance premiums and future
             driving privileges.
@@ -70,10 +70,10 @@ export default function ViolationsGrid() {
                 overflow-hidden
                 border
                 border-gray-200
-                dark:border-white/10
+                
                 bg-white
-                dark:bg-white/3
-                hover:border-orange-500/50
+                
+                hover:border-brand-gold/50
                 hover:-translate-y-2
                 hover:shadow-[0_20px_60px_rgba(250,204,21,0.12)]
                 transition-all
@@ -104,7 +104,7 @@ export default function ViolationsGrid() {
                     px-3
                     py-1
                     rounded-full
-                    bg-orange-400
+                    bg-brand-gold
                     text-black
                     text-xs
                     font-bold
@@ -122,8 +122,8 @@ export default function ViolationsGrid() {
                     text-xl
                     font-bold
                     text-gray-900
-                    dark:text-white
-                    group-hover:text-orange-400
+                    
+                    group-hover:text-brand-gold
                     transition-colors
                     duration-300
                   "
@@ -131,7 +131,7 @@ export default function ViolationsGrid() {
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-relaxed transition-colors duration-300">
+                <p className="mt-3 text-gray-600  text-sm leading-relaxed transition-colors duration-300">
                   {item.shortDescription}
                 </p>
 
@@ -141,7 +141,7 @@ export default function ViolationsGrid() {
                     flex
                     items-center
                     gap-2
-                    text-orange-400
+                    text-brand-gold
                     font-semibold
                   "
                 >
@@ -192,11 +192,11 @@ export default function ViolationsGrid() {
             CATEGORY B
           </span>
 
-          <h2 className="mt-6 text-4xl lg:text-6xl font-black text-gray-900 dark:text-white transition-colors duration-300">
+          <h2 className="mt-6 text-4xl lg:text-6xl font-black text-gray-900  transition-colors duration-300">
             Criminal Violations
           </h2>
 
-          <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto transition-colors duration-300">
+          <p className="mt-4 text-gray-600  max-w-3xl mx-auto transition-colors duration-300">
             Serious traffic-related offenses that may carry
             criminal penalties, license suspension, substantial
             fines and other consequences.
@@ -270,7 +270,7 @@ export default function ViolationsGrid() {
                     text-xl
                     font-bold
                     text-gray-900
-                    dark:text-white
+                    
                     group-hover:text-red-400
                     transition-colors
                     duration-300
@@ -279,7 +279,7 @@ export default function ViolationsGrid() {
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-relaxed transition-colors duration-300">
+                <p className="mt-3 text-gray-600  text-sm leading-relaxed transition-colors duration-300">
                   {item.shortDescription}
                 </p>
 

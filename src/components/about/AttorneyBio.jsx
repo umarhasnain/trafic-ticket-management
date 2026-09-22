@@ -4,157 +4,121 @@ import Image from "next/image";
 
 export default function AttorneyBio() {
   return (
-    <section className="py-24 bg-white dark:bg-zinc-950 overflow-hidden transition-colors duration-500">
-      <div className="max-w-7xl mx-auto px-5 lg:px-8">
-
-        {/* Lizette */}
-
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-          <div data-aos="fade-right">
-            <div className="relative rounded-4xl overflow-hidden shadow-2xl">
+    <section className="bg-white py-20 lg:py-28 overflow-hidden">
+      <div className="max-w-4xl mx-auto px-5 lg:px-8">
+        {/* Lizette Benitez Section */}
+        <article id="lizette" className="scroll-mt-28 text-center" data-aos="fade-up">
+          {/* Centered Photo */}
+          <div className="flex justify-center mb-6">
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[420px] rounded-3xl overflow-hidden shadow-xl border-4 border-white ring-1 ring-gray-200">
               <Image
-                src="/assets/images/lizette-headsho.jpg"
-                alt="Lizette Benitez"
-                width={700}
-                height={900}
-                className="w-full h-162.5 object-cover"
+                 src="/assets/images/lizette-professional.png"
+                alt="Lizette P. Benitez"
+                fill
+                sizes="(max-width: 768px) 288px, 320px"
+                className="object-cover object-top"
+                priority
               />
             </div>
           </div>
 
-          <div data-aos="fade-left">
-            <span className="text-orange-500 dark:text-orange-400 font-bold">
-              FOUNDING ATTORNEY
-            </span>
+          {/* Caption in brand-gold */}
+          <p className="text-brand-gold font-bold uppercase tracking-widest text-sm sm:text-base">
+            MEET LIZETTE
+          </p>
 
-            <h2 className="mt-4 text-5xl font-black text-gray-900 dark:text-white">
-              Lizette P. Benitez
-            </h2>
+          {/* Name Heading in brand-blue */}
+          <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black text-brand-blue">
+            Lizette P. Benitez
+          </h2>
 
-            <p className="mt-6 text-gray-600 dark:text-gray-400 leading-relaxed">
-              Founder of The Traffic Law Firm and one of South
-              Florida's most respected traffic defense attorneys.
-              Since founding the firm in 1993, Lizette has
-              assisted thousands of clients in traffic,
-              criminal and civil matters.
+          <p className="mt-1 text-gray-500 font-medium text-base sm:text-lg">
+            Founder, The Traffic Law Firm
+          </p>
+
+          {/* Full Biography Text */}
+          <div className="mt-8 space-y-6 text-gray-600 text-base sm:text-lg leading-relaxed text-left max-w-3xl mx-auto">
+            <p>
+              Lizette Benitez is the founder of The Traffic Law Firm and a native
+              of Miami, Florida. With more than three decades of legal experience,
+              Lizette has built her practice on dedication, personal attention,
+              and a strong commitment to fighting for her clients.
             </p>
-
-            <div className="grid grid-cols-2 gap-5 mt-10">
-
-              <div className="p-5 rounded-2xl bg-gray-50 dark:bg-zinc-900">
-                <h4 className="font-bold text-gray-900 dark:text-white">22+ Years</h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  Experience
-                </p>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-gray-50 dark:bg-zinc-900">
-                <h4 className="font-bold text-gray-900 dark:text-white">Thousands</h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  Cases Handled
-                </p>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-gray-50 dark:bg-zinc-900">
-                <h4 className="font-bold text-gray-900 dark:text-white">Florida Bar</h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  Member
-                </p>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-gray-50 dark:bg-zinc-900">
-                <h4 className="font-bold text-gray-900 dark:text-white">
-                  Spanish & English
-                </h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  Fluent
-                </p>
-              </div>
-
-            </div>
+            <p>
+              Lizette earned her Juris Doctor degree from New England School of
+              Law in Boston, Massachusetts, in 1989. She began her legal career
+              practicing criminal law and, within two years, established her own
+              practice, which has grown into one of Miami&apos;s longest-standing
+              traffic law firms.
+            </p>
+            <p>
+              Fluent in both English and Spanish, Lizette has earned a reputation
+              for her strategic thinking, strong advocacy, and determination to
+              achieve the best possible results for her clients. Her dedication to
+              her clients has created a legacy of trust that spans generations.
+              Many of the clients she represented early in her career have
+              returned over the years, with their children and grandchildren now
+              seeking her guidance and representation.
+            </p>
+            <p>
+              Lizette has built The Traffic Law Firm around the belief that every
+              client deserves exceptional service, professionalism, and
+              individualized attention. Her team is committed to making every
+              client feel heard, respected, and confident that their case is in
+              capable hands. No one is treated as just another client, but as
+              family.
+            </p>
           </div>
+        </article>
+
+        {/* Elegant Gold Accent Divider */}
+        <div className="my-20 lg:my-28 flex items-center justify-center gap-3">
+          <div className="h-px bg-gray-200 w-24 sm:w-32" />
+          <div className="w-2.5 h-2.5 rounded-full bg-brand-gold" />
+          <div className="h-px bg-gray-200 w-24 sm:w-32" />
         </div>
 
-        {/* Leo */}
-
-        <div className="grid lg:grid-cols-2 gap-16 items-center mt-32">
-
-          <div
-            data-aos="fade-right"
-            className="order-2 lg:order-1"
-          >
-            <span className="text-orange-500 dark:text-orange-400 font-bold">
-              PARTNER ATTORNEY
-            </span>
-
-            <h2 className="mt-4 text-5xl font-black text-gray-900 dark:text-white">
-              Leo Benitez
-            </h2>
-
-            <p className="mt-6 text-gray-600 dark:text-gray-400 leading-relaxed">
-              Leo Benitez founded Benitez & Associates in 1995
-              and has represented clients in commercial,
-              civil and criminal litigation matters while
-              securing numerous high-value verdicts and
-              settlements.
-            </p>
-
-            <div className="grid grid-cols-2 gap-5 mt-10">
-
-              <div className="p-5 rounded-2xl bg-gray-50 dark:bg-zinc-900">
-                <h4 className="font-bold text-gray-900 dark:text-white">30+ Years</h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  Legal Experience
-                </p>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-gray-50 dark:bg-zinc-900">
-                <h4 className="font-bold text-gray-900 dark:text-white">
-                  Million Dollar
-                </h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  Settlements
-                </p>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-gray-50 dark:bg-zinc-900">
-                <h4 className="font-bold text-gray-900 dark:text-white">
-                  Civil Trial Attorney
-                </h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  Florida Bar
-                </p>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-gray-50 dark:bg-zinc-900">
-                <h4 className="font-bold text-gray-900 dark:text-white">
-                  Georgetown Law
-                </h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  J.D.
-                </p>
-              </div>
-
-            </div>
-          </div>
-
-          <div
-            data-aos="fade-left"
-            className="order-1 lg:order-2"
-          >
-            <div className="relative rounded-4xl overflow-hidden shadow-2xl">
+        {/* Leo Benitez Section */}
+        <article id="leo" className="scroll-mt-28 text-center" data-aos="fade-up">
+          {/* Centered Photo */}
+          <div className="flex justify-center mb-6">
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[420px] rounded-3xl overflow-hidden shadow-xl border-4 border-white ring-1 ring-gray-200">
               <Image
-                src="/assets/images/leo-headshot.jpg"
+                src="/assets/images/leo-professional.png"
                 alt="Leo Benitez"
-                width={700}
-                height={900}
-                className="w-full h-162.5 object-cover"
+                fill
+                sizes="(max-width: 768px) 288px, 320px"
+                className="object-cover object-top"
               />
             </div>
           </div>
-        </div>
 
+          {/* Caption in brand-gold */}
+          <p className="text-brand-gold font-bold uppercase tracking-widest text-sm sm:text-base">
+            MEET LEO
+          </p>
+
+          {/* Name Heading in brand-blue */}
+          <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black text-brand-blue">
+            Leo Benitez
+          </h2>
+
+          <p className="mt-1 text-gray-500 font-medium text-base sm:text-lg">
+            Founder, Benitez Law
+          </p>
+
+          {/* Biography Text */}
+          <div className="mt-8 space-y-6 text-gray-600 text-base sm:text-lg leading-relaxed text-left max-w-3xl mx-auto">
+            <p>
+              Leo Benitez founded Benitez &amp; Associates in 1995 and has
+              represented clients in commercial, civil and criminal litigation
+              matters while securing numerous high-value verdicts and settlements.
+            </p>
+            <p className="text-gray-400 italic">
+              [Full biography pending — content to be provided by client]
+            </p>
+          </div>
+        </article>
       </div>
     </section>
   );

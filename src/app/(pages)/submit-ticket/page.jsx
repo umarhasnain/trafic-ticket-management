@@ -308,13 +308,13 @@
 
 //     <div className="max-w-4xl">
 
-//       <span className="inline-flex items-center rounded-full bg-orange-400 text-black px-5 py-2 font-bold">
+//       <span className="inline-flex items-center rounded-full bg-brand-gold text-black px-5 py-2 font-bold">
 //         Online Traffic Ticket Submission
 //       </span>
 
 //       <h1 className="mt-6 text-5xl lg:text-7xl font-black leading-tight">
 //         Submit Your
-//         <span className="block text-orange-400">
+//         <span className="block text-brand-gold">
 //           Traffic Citation
 //         </span>
 //         Online
@@ -334,7 +334,7 @@
 
 // {/* ================= IMPORTANT NOTICE ================= */}
 
-// <section className="bg-orange-50 border-y border-orange-300">
+// <section className="bg-brand-blue/5 border-y border-orange-300">
 
 //   <div className="max-w-7xl mx-auto px-5 py-10">
 
@@ -342,7 +342,7 @@
 
 //       <div className="flex items-center gap-3 mb-5">
 
-//         <div className="w-12 h-12 rounded-full bg-orange-400 flex items-center justify-center text-black text-xl font-black">
+//         <div className="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center text-black text-xl font-black">
 //           !
 //         </div>
 
@@ -426,7 +426,7 @@
 
 //     <div className="text-center">
 
-//       <span className="inline-block px-5 py-2 rounded-full bg-orange-100 text-orange-700 font-bold">
+//       <span className="inline-block px-5 py-2 rounded-full bg-brand-gold/10 text-brand-gold-dark font-bold">
 //         Attorney Fees
 //       </span>
 
@@ -444,7 +444,7 @@
 //           Accident Citation
 //         </h3>
 
-//         <div className="text-5xl font-black text-orange-500 mt-5">
+//         <div className="text-5xl font-black text-brand-gold mt-5">
 //           $150
 //         </div>
 
@@ -456,7 +456,7 @@
 //           Speeding Citation
 //         </h3>
 
-//         <div className="text-5xl font-black text-orange-500 mt-5">
+//         <div className="text-5xl font-black text-brand-gold mt-5">
 //           $150
 //         </div>
 
@@ -468,7 +468,7 @@
 //           Other Infractions
 //         </h3>
 
-//         <div className="text-5xl font-black text-orange-500 mt-5">
+//         <div className="text-5xl font-black text-brand-gold mt-5">
 //           $100
 //         </div>
 
@@ -485,7 +485,7 @@
 //       <p className="text-gray-300">
 //         Additional citations issued by the same officer during the same stop
 //         are billed at
-//         <span className="text-orange-400 font-bold">
+//         <span className="text-brand-gold font-bold">
 //           {" "} $50 each.
 //         </span>
 //       </p>
@@ -639,8 +639,8 @@
 //         <button
 //           onClick={checkEligibility}
 //           className="
-//           bg-orange-500
-//           hover:bg-orange-400
+//           bg-brand-gold
+//           hover:bg-brand-gold
 //           text-black
 //           px-10
 //           py-4
@@ -1215,47 +1215,91 @@ export default function SubmitTicketPage() {
     <main className="min-h-screen bg-gray-50">
 
 
-      {/* ================= HERO ================= */}
+      {/* ================= VIDEO HERO ================= */}
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-orange-600 text-white">
+      <section className="relative overflow-hidden min-h-[60vh] flex items-center text-white">
 
-        <div className="absolute inset-0 bg-black/40"></div>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/assets/images/secretary-video.mp4" type="video/mp4" />
+        </video>
 
-        <div className="relative max-w-7xl mx-auto px-5 py-28">
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-blue/80 via-black/60 to-brand-blue/90" />
 
-          <span className="inline-flex rounded-full bg-orange-400 text-black px-5 py-2 font-bold">
-            Secure Online Ticket Submission
+        <div className="relative z-10 max-w-7xl mx-auto px-5 py-28 w-full text-center">
+
+          <img
+            src="/assets/images/tlf-logo-3d.png"
+            alt="TLF"
+            className="h-20 lg:h-24 mx-auto mb-8 drop-shadow-2xl animate-swoosh"
+          />
+
+          <span className="inline-flex rounded-full bg-brand-gold text-white px-5 py-2 font-bold text-sm tracking-wide uppercase">
+            Hire Us — Submit Your Citation
           </span>
 
-          <h1 className="mt-8 text-5xl lg:text-7xl font-black leading-tight">
+          <h1 className="mt-8 text-4xl lg:text-6xl font-black leading-tight">
 
-            Submit Your
+            The Traffic
 
-            <span className="block text-orange-400">
-              Traffic Citation
+            <span className="block text-brand-gold">
+              Law Firm
             </span>
-
-            Online
 
           </h1>
 
-          <p className="mt-8 max-w-3xl text-xl text-gray-300 leading-9">
-
+          <p className="mt-6 max-w-2xl mx-auto text-lg text-white/80 leading-8">
             Submit eligible Florida traffic citations
             securely online. Our attorneys will review
             your case and contact you within 24 hours.
-
           </p>
 
         </div>
 
       </section>
 
-      <section className="py-16 bg-orange-50">
+      {/* ================= HIRE US CASE TYPE SELECTOR DROP BOX (REQ-7.2) ================= */}
+      <section className="py-8 bg-white border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-5 text-center">
+          <label htmlFor="case-type-select" className="block text-sm font-bold text-brand-blue uppercase tracking-wider mb-2">
+            Select Case Type to Retain The Traffic Law Firm:
+          </label>
+          <div className="relative max-w-md mx-auto">
+            <select
+              id="case-type-select"
+              aria-label="Select Case Type"
+              defaultValue="traffic"
+              onChange={(e) => {
+                if (e.target.value === "criminal") {
+                  window.location.href = "tel:3054420243";
+                } else if (e.target.value === "litigation") {
+                  window.location.href = "/contact";
+                }
+              }}
+              className="w-full bg-brand-blue/5 border-2 border-brand-blue/20 rounded-2xl p-4 text-brand-blue font-bold text-base focus:border-brand-gold focus:outline-none transition-all cursor-pointer"
+            >
+              <option value="traffic">Civil Traffic Infraction (Submit Citation Below)</option>
+              <option value="criminal">Criminal Traffic & Crime Case (Call For Defense)</option>
+              <option value="litigation">Civil & Commercial Litigation (Contact Office)</option>
+            </select>
+          </div>
+          <p className="text-xs text-gray-500 mt-2">
+            For criminal citations or litigation matters, an immediate attorney consultation is required.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 bg-brand-blue/5">
 
         <div className="max-w-7xl mx-auto px-5">
 
-          <div className="bg-white rounded-3xl border border-orange-300 shadow-xl p-10">
+          <div className="bg-white rounded-3xl border border-brand-gold/30 shadow-xl p-10">
 
             <h2 className="text-4xl font-black">
 
@@ -1329,7 +1373,7 @@ export default function SubmitTicketPage() {
 
           <div className="text-center">
 
-            <span className="inline-flex bg-orange-100 text-orange-700 rounded-full px-5 py-2 font-bold">
+            <span className="inline-flex bg-brand-gold/10 text-brand-gold-dark rounded-full px-5 py-2 font-bold">
 
               Attorney Fees
 
@@ -1353,7 +1397,7 @@ export default function SubmitTicketPage() {
 
               </h3>
 
-              <div className="text-5xl font-black text-orange-500 mt-6">
+              <div className="text-5xl font-black text-brand-gold mt-6">
 
                 $150
 
@@ -1369,7 +1413,7 @@ export default function SubmitTicketPage() {
 
               </h3>
 
-              <div className="text-5xl font-black text-orange-500 mt-6">
+              <div className="text-5xl font-black text-brand-gold mt-6">
 
                 $150
 
@@ -1385,7 +1429,7 @@ export default function SubmitTicketPage() {
 
               </h3>
 
-              <div className="text-5xl font-black text-orange-500 mt-6">
+              <div className="text-5xl font-black text-brand-gold mt-6">
 
                 $100
 
@@ -1395,7 +1439,7 @@ export default function SubmitTicketPage() {
 
           </div>
 
-          <div className="bg-black text-white rounded-3xl p-8 mt-10">
+          <div className="bg-brand-blue text-white rounded-3xl p-8 mt-10 shadow-lg">
 
             <h3 className="text-2xl font-black">
 
@@ -1407,7 +1451,7 @@ export default function SubmitTicketPage() {
 
               Each additional citation issued by the same officer during the same stop costs
 
-              <span className="text-orange-400 font-bold">
+              <span className="text-brand-gold font-bold">
 
                 $50
 
@@ -1506,7 +1550,7 @@ export default function SubmitTicketPage() {
 
               <button
                 onClick={checkEligibility}
-                className="bg-orange-500 hover:bg-orange-400 text-black px-10 py-4 rounded-xl font-bold"
+                className="bg-brand-gold hover:bg-brand-gold text-black px-10 py-4 rounded-xl font-bold"
               >
 
                 Check Eligibility
@@ -1609,7 +1653,7 @@ export default function SubmitTicketPage() {
                     duration-300
 
                     ${step >= item.id
-                        ? "bg-orange-500 text-black shadow-lg"
+                        ? "bg-brand-gold text-black shadow-lg"
                         : "bg-gray-100 text-gray-500"
                       }
                     `}
@@ -1940,7 +1984,7 @@ export default function SubmitTicketPage() {
 
                   </label>
 
-                  <div className="mt-2 bg-orange-50 border border-orange-300 rounded-xl p-4">
+                  <div className="mt-2 bg-brand-blue/5 border border-orange-300 rounded-xl p-4">
 
                     <span className="text-3xl font-black text-orange-600">
 
@@ -1979,7 +2023,7 @@ export default function SubmitTicketPage() {
                   p-4
                   resize-none
                   outline-none
-                  focus:border-orange-500
+                  focus:border-brand-gold
                   "
                 />
 
@@ -2098,7 +2142,7 @@ export default function SubmitTicketPage() {
 
     ${isNextDisabled
                       ? "bg-gray-300 text-gray-500 cursor-not-allowed opacity-60 pointer-events-none"
-                      : "bg-orange-500 hover:bg-orange-400 text-black"
+                      : "bg-brand-gold hover:bg-brand-gold text-black"
                     }
   `}
                 >
@@ -2158,7 +2202,7 @@ export default function SubmitTicketPage() {
                     border
                     rounded-xl
                     p-4
-                    focus:border-orange-500
+                    focus:border-brand-gold
                     outline-none
                     "
                   />
@@ -2187,7 +2231,7 @@ export default function SubmitTicketPage() {
                     border
                     rounded-xl
                     p-4
-                    focus:border-orange-500
+                    focus:border-brand-gold
                     outline-none
                     "
                   />
@@ -2216,7 +2260,7 @@ export default function SubmitTicketPage() {
                     border
                     rounded-xl
                     p-4
-                    focus:border-orange-500
+                    focus:border-brand-gold
                     outline-none
                     "
                   />
@@ -2245,7 +2289,7 @@ export default function SubmitTicketPage() {
                     border
                     rounded-xl
                     p-4
-                    focus:border-orange-500
+                    focus:border-brand-gold
                     outline-none
                     "
                   />
@@ -2292,8 +2336,8 @@ export default function SubmitTicketPage() {
                   onClick={nextStep}
                   className="
                   flex items-center gap-2
-                  bg-orange-500
-                  hover:bg-orange-400
+                  bg-brand-gold
+                  hover:bg-brand-gold
                   text-black
                   px-8 py-4
                   rounded-xl
@@ -2337,11 +2381,11 @@ export default function SubmitTicketPage() {
 
                 {/* FRONT */}
 
-                <div className="border-2 border-dashed rounded-3xl p-8 hover:border-orange-500 transition">
+                <div className="border-2 border-dashed rounded-3xl p-8 hover:border-brand-gold transition">
 
                   <label className="cursor-pointer block text-center">
 
-                    <FiImage className="mx-auto text-6xl text-orange-500" />
+                    <FiImage className="mx-auto text-6xl text-brand-gold" />
 
                     <h3 className="mt-5 text-xl font-black">
 
@@ -2363,7 +2407,7 @@ export default function SubmitTicketPage() {
                       onChange={handleFileUpload}
                     />
 
-                    <div className="mt-6 bg-orange-500 text-black py-3 rounded-xl font-bold">
+                    <div className="mt-6 bg-brand-gold text-black py-3 rounded-xl font-bold">
 
                       Choose File
 
@@ -2437,11 +2481,11 @@ export default function SubmitTicketPage() {
 
                 {/* BACK */}
 
-                <div className="border-2 border-dashed rounded-3xl p-8 hover:border-orange-500 transition">
+                <div className="border-2 border-dashed rounded-3xl p-8 hover:border-brand-gold transition">
 
                   <label className="cursor-pointer block text-center">
 
-                    <FiImage className="mx-auto text-6xl text-orange-500" />
+                    <FiImage className="mx-auto text-6xl text-brand-gold" />
 
                     <h3 className="mt-5 text-xl font-black">
 
@@ -2463,7 +2507,7 @@ export default function SubmitTicketPage() {
                       onChange={handleFileUpload}
                     />
 
-                    <div className="mt-6 bg-orange-500 text-black py-3 rounded-xl font-bold">
+                    <div className="mt-6 bg-brand-gold text-black py-3 rounded-xl font-bold">
 
                       Choose File
 
@@ -2575,7 +2619,7 @@ export default function SubmitTicketPage() {
 
                   }}
 
-                  className="bg-orange-500 hover:bg-orange-400 px-10 py-4 rounded-xl font-bold"
+                  className="bg-brand-gold hover:bg-brand-gold px-10 py-4 rounded-xl font-bold"
 
                 >
 
@@ -2691,7 +2735,7 @@ export default function SubmitTicketPage() {
 
                 <div>
 
-                  <div className="rounded-2xl border-2 border-orange-400 bg-white p-8 shadow-lg">
+                  <div className="rounded-2xl border-2 border-brand-gold bg-white p-8 shadow-lg">
 
                     <h3 className="text-2xl font-black mb-8">
                       Payment Summary
@@ -2783,7 +2827,7 @@ export default function SubmitTicketPage() {
 
               {/* TERMS */}
 
-              <div className="mt-10 rounded-2xl bg-orange-50 border border-orange-300 p-6">
+              <div className="mt-10 rounded-2xl bg-brand-blue/5 border border-orange-300 p-6">
 
                 <label className="flex gap-3 items-start">
 

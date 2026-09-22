@@ -3,7 +3,6 @@ import "./globals.css";
 import AosProvider from "@/components/providers/AosProvider";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import ThemeProvider from "@/components/providers/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,29 +15,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Trafic Management System",
-  description: "Your trusted partner for traffic ticket defense and legal solutions.",
+  title: "The Traffic Law Firm — Here to Defend You",
+  description:
+    "Over 30 years defending drivers in Miami. Civil traffic infractions, criminal traffic cases, and civil litigation. Call (305) 442-0243.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-         <ThemeProvider>
-
-
-        
-         <AosProvider>
+      <body className="min-h-full flex flex-col bg-white text-gray-900">
+        <AosProvider>
           <Navbar />
           {children}
           <Footer />
-          </AosProvider>
-           </ThemeProvider>
-        </body>
+        </AosProvider>
+      </body>
     </html>
   );
 }

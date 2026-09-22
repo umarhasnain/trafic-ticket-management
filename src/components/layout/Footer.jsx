@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,23 +13,23 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 dark:bg-[#050505] text-gray-900 dark:text-white overflow-hidden transition-colors duration-500">
+    <footer className="bg-brand-blue text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h2 className="text-4xl font-black">
-              Traffic
-              <span className="text-orange-400">
-                {" "}
-                Ticket
-              </span>
-            </h2>
+            <Image
+              src="/assets/images/tlf-logo-3d.png"
+              alt="The Traffic Law Firm"
+              width={180}
+              height={65}
+              className="h-16 w-auto object-contain brightness-0 invert"
+            />
 
-            <p className="mt-5 text-gray-600 dark:text-gray-400 max-w-md leading-relaxed">
-              Helping drivers submit traffic tickets quickly and
-              receive professional guidance through a secure and
-              streamlined process.
+            <p className="mt-5 text-white/60 max-w-md leading-relaxed">
+              Over 30 years defending drivers in Miami. The Traffic
+              Law Firm is here to defend you with dedication,
+              personal attention, and proven results.
             </p>
 
             <div className="flex gap-4 mt-8">
@@ -36,7 +37,7 @@ export default function Footer() {
                 (Icon, i) => (
                   <button
                     key={i}
-                    className="w-11 h-11 rounded-full border border-orange-500/30 dark:border-orange-400/30 flex items-center justify-center hover:bg-orange-400 hover:text-black transition-all"
+                    className="w-11 h-11 rounded-full border border-brand-gold/30 flex items-center justify-center hover:bg-brand-gold hover:text-brand-blue hover:border-brand-gold transition-all"
                   >
                     <Icon />
                   </button>
@@ -45,58 +46,58 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company */}
+          {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-xl mb-5">
-              Company
+            <h3 className="font-bold text-xl mb-5 text-brand-gold">
+              Quick Links
             </h3>
 
-            <div className="space-y-3 text-gray-600 dark:text-gray-400">
-              <Link href="/">About Us</Link>
-              <br />
-              <Link href="/">Contact</Link>
-              <br />
-              <Link href="/">Privacy Policy</Link>
-              <br />
-              <Link href="/">Terms & Conditions</Link>
+            <div className="space-y-3 text-white/60">
+              <Link href="/" className="block hover:text-brand-gold transition-colors">Home</Link>
+              <Link href="/services" className="block hover:text-brand-gold transition-colors">Practice Areas</Link>
+              <Link href="/about" className="block hover:text-brand-gold transition-colors">About Us</Link>
+              <Link href="/reviews" className="block hover:text-brand-gold transition-colors">Reviews</Link>
+              <Link href="/contact" className="block hover:text-brand-gold transition-colors">Contact Us</Link>
+              <Link href="/submit-ticket" className="block hover:text-brand-gold transition-colors">Submit Citation</Link>
             </div>
           </div>
 
-          {/* Services */}
+          {/* Practice Areas */}
           <div>
-            <h3 className="font-bold text-xl mb-5">
-              Services
+            <h3 className="font-bold text-xl mb-5 text-brand-gold">
+              Practice Areas
             </h3>
 
-            <div className="space-y-3 text-gray-600 dark:text-gray-400">
-              <p>Traffic Tickets</p>
-              <p>Case Reviews</p>
-              <p>Legal Referrals</p>
-              <p>Support</p>
+            <div className="space-y-3 text-white/60">
+              <p>Civil Traffic Infractions</p>
+              <p>Criminal Traffic & Crime</p>
+              <p>Civil & Commercial Litigation</p>
             </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-xl mb-5">
+            <h3 className="font-bold text-xl mb-5 text-brand-gold">
               Contact
             </h3>
 
-            <div className="space-y-4 text-gray-600 dark:text-gray-400">
+            <div className="space-y-4 text-white/60">
               <div className="flex gap-3 items-start">
-                <FaPhoneAlt className="text-orange-500 dark:text-orange-400 mt-1" />
-                <span>(305) 442-0243</span>
+                <FaPhoneAlt className="text-brand-gold mt-1" />
+                <a href="tel:+13054420243" className="hover:text-brand-gold transition-colors">
+                  (305) 442-0243
+                </a>
               </div>
 
               <div className="flex gap-3 items-start">
-                <FaEnvelope className="text-orange-500 dark:text-orange-400 mt-1" />
-                <span>
+                <FaEnvelope className="text-brand-gold mt-1" />
+                <a href="mailto:info@heretodefendyou.com" className="hover:text-brand-gold transition-colors text-sm">     
                   info@heretodefendyou.com
-                </span>
+                </a>
               </div>
 
               <div className="flex gap-3 items-start">
-                <FaMapMarkerAlt className="text-orange-500 dark:text-orange-400 mt-1" />
+                <FaMapMarkerAlt className="text-brand-gold mt-1" />
                 <span>
                   122 Minorca Avenue,
                   <br />
@@ -108,15 +109,15 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-black/10 dark:bg-white/10 my-10" />
+        <div className="h-px bg-white/10 my-10" />
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-center md:text-left">
-            © 2026 Traffic Ticket. All Rights Reserved.
+          <p className="text-white/40 text-center md:text-left">
+            © 2026 The Traffic Law Firm. All Rights Reserved.
           </p>
 
-          <p className="text-gray-500">
+          <p className="text-white/40">
             Developed by {"Bloops Designs"}.
           </p>
         </div>

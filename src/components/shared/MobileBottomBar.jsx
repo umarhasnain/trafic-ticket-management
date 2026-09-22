@@ -14,29 +14,31 @@ export default function MobileBottomBar() {
         right-0
         z-[999]
         bg-white/95
-        dark:bg-black/95
         backdrop-blur-xl
         border-t
         border-gray-200
-        dark:border-yellow-500/20
         p-3
       "
     >
-      <div className="grid grid-cols-2 gap-3 ">
+      <div className="grid grid-cols-2 gap-3">
         <Link href="/submit-ticket">
           <button
             className="
-            bg-yellow-400
-            text-black
-            py-3
-            px-4
-            rounded-xl
-            font-bold
-            flex
-            items-center
-            justify-center
-            gap-2
-          "
+              w-full
+              bg-brand-gold
+              hover:bg-brand-gold-light
+              text-white
+              py-3
+              px-4
+              rounded-xl
+              font-bold
+              flex
+              items-center
+              justify-center
+              gap-2
+              shadow-sm
+              transition-colors
+            "
           >
             <FaTicketAlt />
             Submit
@@ -45,20 +47,22 @@ export default function MobileBottomBar() {
         <Link href="/contact">
           <button
             className="
-            border
-            border-yellow-500
-            dark:border-yellow-400
-            text-yellow-600
-            dark:text-yellow-400
-            py-3
-            px-4
-            rounded-xl
-            font-bold
-            flex
-            items-center
-            justify-center
-            gap-2
-          "
+              w-full
+              border-2
+              border-brand-blue
+              text-brand-blue
+              hover:bg-brand-blue
+              hover:text-white
+              py-3
+              px-4
+              rounded-xl
+              font-bold
+              flex
+              items-center
+              justify-center
+              gap-2
+              transition-colors
+            "
           >
             <FaPhoneAlt />
             Call Now

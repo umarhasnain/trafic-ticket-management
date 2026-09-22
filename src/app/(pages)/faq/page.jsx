@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 
 const faqData = [
   {
@@ -59,19 +60,17 @@ export default function FAQPage() {
   }, [activeCategory, search]);
 
   return (
-    <div className="bg-white dark:bg-transparent mt-20 text-gray-900 dark:text-white transition-colors duration-300">
-
+    <div className="bg-white min-h-screen text-gray-900">
       {/* TOP HEADER */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
-
-        <h1 className="text-5xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
+      <div className="max-w-6xl mx-auto px-6 pt-16 pb-12">
+        <h1 className="text-4xl sm:text-5xl font-black text-brand-blue tracking-tight">
           Traffic Law{" "}
-          <span className="text-orange-400">
+          <span className="text-brand-gold">
             FAQ
           </span>
         </h1>
 
-        <p className="text-slate-600 dark:text-slate-300 mt-2 transition-colors duration-300">
+        <p className="text-gray-600 mt-2 text-lg">
           Instant answers for tickets, citations & criminal violations
         </p>
 
@@ -85,18 +84,15 @@ export default function FAQPage() {
               w-full
               p-4
               rounded-2xl
-              bg-gray-100
-              dark:bg-white/10
-              backdrop-blur
+              bg-gray-50
               border
               border-gray-200
-              dark:border-white/20
               text-gray-900
-              dark:text-white
-              placeholder:text-gray-500
-              dark:placeholder:text-gray-400
+              placeholder:text-gray-400
               outline-none
-              focus:border-orange-400
+              focus:border-brand-blue
+              focus:ring-1
+              focus:ring-brand-blue
               transition-all
               duration-300
             "
@@ -106,10 +102,8 @@ export default function FAQPage() {
 
       {/* LAYOUT */}
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
-
         {/* SIDEBAR */}
-        <div className="md:sticky md:top-10 h-fit space-y-2">
-
+        <div className="md:sticky md:top-28 h-fit space-y-2">
           {categories.map((c) => (
             <button
               key={c}
@@ -122,25 +116,23 @@ export default function FAQPage() {
                 rounded-xl
                 transition-all
                 duration-300
-                font-medium
+                font-semibold
                 ${
                   activeCategory === c
-                    ? "bg-orange-400 text-black"
-                    : "bg-gray-100 dark:bg-white/5 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10"
+                    ? "bg-brand-gold text-white shadow-md"
+                    : "bg-gray-50 text-gray-700 hover:bg-gray-100 hover:text-brand-blue"
                 }
               `}
             >
               {c}
             </button>
           ))}
-
         </div>
 
         {/* FAQ CARDS */}
         <div className="md:col-span-3 space-y-4">
-
           {filtered.length === 0 && (
-            <div className="text-slate-500 dark:text-slate-400 text-center py-10 transition-colors duration-300">
+            <div className="text-gray-500 text-center py-10">
               No results found
             </div>
           )}
@@ -151,19 +143,16 @@ export default function FAQPage() {
               className="
                 group
                 bg-gray-50
-                dark:bg-white/5
                 border
                 border-gray-200
-                dark:border-white/10
                 rounded-2xl
                 p-5
-                backdrop-blur
-                hover:border-orange-400
+                hover:border-brand-gold
+                hover:shadow-md
                 transition-all
                 duration-300
               "
             >
-
               <button
                 onClick={() =>
                   setOpenIndex(
@@ -172,38 +161,31 @@ export default function FAQPage() {
                 }
                 className="w-full text-left"
               >
-
                 <div className="flex justify-between items-start gap-4">
-
                   <div>
-
-                    <span className="text-xs text-orange-400">
+                    <span className="text-xs font-bold text-brand-gold uppercase tracking-wider">
                       {item.category}
                     </span>
 
                     <h3
                       className="
                         text-lg
-                        font-semibold
+                        font-bold
                         mt-1
-                        text-gray-900
-                        dark:text-white
-                        group-hover:text-orange-300
+                        text-brand-blue
+                        group-hover:text-brand-gold
                         transition-colors
                         duration-300
                       "
                     >
                       {item.q}
                     </h3>
-
                   </div>
 
-                  <span className="text-2xl text-orange-400">
+                  <span className="text-2xl font-bold text-brand-gold select-none">
                     {openIndex === i ? "−" : "+"}
                   </span>
-
                 </div>
-
               </button>
 
               {/* ANSWER */}
@@ -211,24 +193,18 @@ export default function FAQPage() {
                 <div
                   className="
                     mt-4
-                    text-slate-600
-                    dark:text-slate-300
+                    text-gray-600
                     leading-7
                     border-t
                     border-gray-200
-                    dark:border-white/10
                     pt-4
-                    transition-colors
-                    duration-300
                   "
                 >
                   {item.a}
                 </div>
               )}
-
             </div>
           ))}
-
         </div>
       </div>
 
@@ -237,42 +213,41 @@ export default function FAQPage() {
         className="
           text-center
           py-16
-          mt-10
+          mt-16
           border-t
           border-gray-200
-          dark:border-white/10
-          transition-colors
-          duration-300
         "
       >
-
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
+        <h2 className="text-3xl font-bold text-brand-blue">
           Need Legal Help?
         </h2>
 
-        <p className="text-slate-600 dark:text-slate-400 mt-2 transition-colors duration-300">
-          Talk to a traffic attorney today
+        <p className="text-gray-600 mt-2">
+          Talk to an experienced traffic attorney today
         </p>
 
-        <button
-          className="
-            mt-6
-            px-8
-            py-4
-            bg-orange-400
-            text-black
-            font-bold
-            rounded-2xl
-            hover:scale-105
-            transition-all
-            duration-300
-          "
-        >
-          Contact Now
-        </button>
-
+        <Link href="/contact">
+          <button
+            className="
+              mt-6
+              px-8
+              py-4
+              bg-brand-gold
+              hover:bg-brand-gold-light
+              text-white
+              font-bold
+              rounded-2xl
+              shadow-lg
+              shadow-brand-gold/25
+              hover:scale-105
+              transition-all
+              duration-300
+            "
+          >
+            Contact Now
+          </button>
+        </Link>
       </div>
-
     </div>
   );
 }

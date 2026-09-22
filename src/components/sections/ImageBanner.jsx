@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ImageBanner({
   image = "/assets/images/img3.png",
   alt = "Banner",
-  height = "h-[260px] md:h-[420px] lg:h-[500px]",
+  height = "h-[460px] md:h-[620px] lg:h-[700px]",
   rounded = true,
   shadow = true,
 }) {
@@ -30,8 +30,8 @@ export default function ImageBanner({
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-black/10" />
 
         {/* Decorative Glow */}
-        <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-orange-500/20 blur-3xl" />
-        <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-orange-400/10 blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-brand-gold/20 blur-3xl" />
+        <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-brand-gold/10 blur-3xl" />
       </div>
     </section>
   );

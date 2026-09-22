@@ -65,7 +65,7 @@ export default function AttorneyReviewRequired() {
   return (
     <section className="transition-colors duration-300">
       <div>
-        <h2 className="text-gray-900 dark:text-white transition-colors duration-300">
+        <h2 className="text-gray-900  transition-colors duration-300">
           Attorney Review Recommended
         </h2>
 

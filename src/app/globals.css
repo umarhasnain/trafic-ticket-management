@@ -1,58 +1,3 @@
-/* @import "tailwindcss";
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #000;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #ff4103;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-track {
-  background: #111;
-}
-
-::selection {
-  background: #ff4103;
-  color: #000;
-}
-
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}  */
-
-
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -60,6 +5,12 @@ body {
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: #1B3A5C;
+  --color-primary-light: #2B5A8C;
+  --color-primary-dark: #0F2840;
+  --color-accent: #C5A55A;
+  --color-accent-light: #D4BA7A;
+  --color-accent-dark: #A88B3D;
 }
 
 @theme inline {
@@ -67,6 +18,12 @@ body {
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-brand-blue: #1B3A5C;
+  --color-brand-blue-light: #2B5A8C;
+  --color-brand-blue-dark: #0F2840;
+  --color-brand-gold: #C5A55A;
+  --color-brand-gold-light: #D4BA7A;
+  --color-brand-gold-dark: #A88B3D;
 }
 
 .dark {
@@ -89,15 +46,42 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff4103;
+  background: var(--color-primary);
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #111;
+  background: #f1f1f1;
 }
 
 ::selection {
-  background: #ff4103;
+  background: var(--color-accent);
   color: #000;
+}
+
+/* Road swoosh animation */
+@keyframes swoosh-draw {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+.animate-swoosh {
+  animation: swoosh-draw 1.5s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-swoosh {
+    animation: none;
+    clip-path: none;
+    opacity: 1;
+  }
 }

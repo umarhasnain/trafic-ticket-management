@@ -12,14 +12,15 @@ export default function FloatingCTA() {
             group
             relative
             overflow-hidden
-            bg-orange-400
-            hover:bg-orange-300
-            text-black
+            bg-brand-gold
+            hover:bg-brand-gold-light
+            text-white
             font-bold
             px-6
             py-4
             rounded-full
-            shadow-[0_15px_50px_rgba(250,204,21,.45)]
+            shadow-xl
+            shadow-brand-gold/35
             hover:scale-105
             transition-all
             duration-300
@@ -29,7 +30,7 @@ export default function FloatingCTA() {
           "
         >
           {/* Ping decoration (behind content) */}
-          <span className="absolute inset-0 rounded-full animate-ping bg-orange-400 opacity-20 -z-10" />
+          <span className="absolute inset-0 rounded-full animate-ping bg-brand-gold opacity-20 -z-10" />
 
           {/* Shine sweep */}
           <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition duration-1000" />

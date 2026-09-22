@@ -1,246 +1,105 @@
-// "use client";
-
-// import Image from "next/image";
-// import Link from "next/link";
-// import {
-//   FaStar,
-//   FaShieldAlt,
-//   FaPhoneAlt,
-// } from "react-icons/fa";
-
-// export default function Hero() {
-//   return (
-//     <section className="relative overflow-hidden bg-black min-h-screen flex items-center">
-//       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#facc1530,transparent_40%)]" />
-
-//       <div className="max-w-7xl mx-auto px-5 lg:px-8 py-32">
-//         <div className="grid lg:grid-cols-2 gap-16 items-center">
-//           {/* Left */}
-//           <div data-aos="fade-right">
-//             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500 bg-orange-500/10 text-orange-300 text-sm mb-6">
-//               <FaShieldAlt />
-//               Trusted Traffic Citation Support
-//             </div>
-
-//             <h1 className="text-5xl md:text-6xl xl:text-7xl font-black text-white leading-tight">
-//               Got a
-//               <span className="text-orange-400"> Traffic Ticket?</span>
-//               <br />
-//               Submit It
-//               <span className="text-orange-400">
-//                 {" "}
-//                 Immediately.
-//               </span>
-//             </h1>
-
-//             <p className="mt-6 text-lg text-gray-300 max-w-xl">
-//               Upload your traffic ticket in under 60 seconds and get
-//               connected with professionals who can review your case,
-//               reduce penalties, and protect your driving record.
-//             </p>
-
-//             <div className="flex flex-wrap gap-4 mt-10">
-//               <Link href="/submit-ticket">
-//                 <button className="bg-orange-400 hover:bg-orange-300 text-black px-8 py-4 rounded-xl font-bold transition hover:scale-105">
-//                   Submit Ticket →
-//                 </button>
-//               </Link>
-//               <Link href="tel:+3054420243">
-
-
-
-//                 <button className="border border-orange-400 text-orange-400 px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:bg-orange-400 hover:text-black transition">
-//                   <FaPhoneAlt />
-//                   Call Now
-//                 </button>
-//               </Link>
-//             </div>
-
-//             <div className="flex flex-wrap gap-8 mt-10">
-//               <div>
-//                 <h3 className="text-orange-400 text-3xl font-black">
-//                   10K+
-//                 </h3>
-//                 <p className="text-gray-400">Cases Reviewed</p>
-//               </div>
-
-//               <div>
-//                 <h3 className="text-orange-400 text-3xl font-black">
-//                   95%
-//                 </h3>
-//                 <p className="text-gray-400">Success Rate</p>
-//               </div>
-
-//               <div>
-//                 <h3 className="text-orange-400 text-3xl font-black">
-//                   24/7
-//                 </h3>
-//                 <p className="text-gray-400">Support</p>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Right */}
-//           <div data-aos="fade-left">
-//             <div className="relative">
-//               <div className="absolute -inset-4 bg-orange-400 blur-3xl opacity-20 rounded-full" />
-
-//               <div className="relative bg-white/10 backdrop-blur-xl border border-white/10 rounded-[32px] p-5">
-//                 <div className="relative h-[600px] w-full rounded-3xl overflow-hidden">
-//                   <Image
-//                     src="/assets/images/img4.png"
-//                     alt="Traffic Ticket Upload"
-//                     fill
-//                     className="object-cover"
-//                   />
-//                 </div>
-
-//                 <div className="absolute bottom-10 left-4 right-4">
-//                   <div className="bg-black/80 backdrop-blur-xl rounded-2xl p-5 border border-orange-500/20">
-//                     <div className="flex items-center gap-2 text-orange-400 mb-2">
-//                       <FaStar />
-//                       <FaStar />
-//                       <FaStar />
-//                       <FaStar />
-//                       <FaStar />
-//                     </div>
-
-//                     <h4 className="text-white font-semibold">
-//                       Upload Your Ticket in Under 60 Seconds
-//                     </h4>
-
-//                     <p className="text-gray-400 text-sm mt-1">
-//                       Fast, secure and confidential review process.
-//                     </p>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import {
-  FaStar,
-  FaShieldAlt,
-  FaPhoneAlt,
-} from "react-icons/fa";
+import Image from "next/image";
+import { FaPhoneAlt, FaPlay } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-black min-h-screen flex items-center transition-colors duration-500">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#facc1530,transparent_40%)]" />
+    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/assets/images/img1.png"
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/assets/images/highway-video.mp4" type="video/mp4" />
+      </video>
 
-      <div className="max-w-7xl mx-auto px-5 lg:px-8 py-32">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left */}
-          <div data-aos="fade-right">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500 bg-orange-500/10 text-orange-500 dark:text-orange-300 text-sm mb-6">
-              <FaShieldAlt />
-              Trusted Traffic Citation Support
-            </div>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
 
-            <h1 className="text-5xl md:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white leading-tight">
-              Got a
-              <span className="text-orange-400"> Traffic Ticket?</span>
-              <br />
-              Submit It
-              <span className="text-orange-400">
-                {" "}
-                Immediately.
-              </span>
-            </h1>
-
-            <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-xl">
-              Upload your traffic ticket in under 60 seconds and get
-              connected with professionals who can review your case,
-              reduce penalties, and protect your driving record.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mt-10">
-              <Link href="/submit-ticket">
-                <button className="bg-orange-400 hover:bg-orange-300 text-black px-8 py-4 rounded-xl font-bold transition hover:scale-105">
-                  Submit Ticket →
-                </button>
-              </Link>
-              <Link href="tel:+3054420243">
-                <button className="border border-orange-400 text-orange-500 dark:text-orange-400 px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:bg-orange-400 hover:text-black transition">
-                  <FaPhoneAlt />
-                  Call Now
-                </button>
-              </Link>
-            </div>
-
-            <div className="flex flex-wrap gap-8 mt-10">
-              <div>
-                <h3 className="text-orange-400 text-3xl font-black">
-                  10K+
-                </h3>
-                <p className="text-gray-500 dark:text-gray-400">Cases Reviewed</p>
-              </div>
-
-              <div>
-                <h3 className="text-orange-400 text-3xl font-black">
-                  95%
-                </h3>
-                <p className="text-gray-500 dark:text-gray-400">Success Rate</p>
-              </div>
-
-              <div>
-                <h3 className="text-orange-400 text-3xl font-black">
-                  24/7
-                </h3>
-                <p className="text-gray-500 dark:text-gray-400">Support</p>
-              </div>
-            </div>
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-32 w-full text-center">
+        <div data-aos="fade-up">
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/assets/images/tlf-logo-3d.png"
+              alt="TLF"
+              width={200}
+              height={80}
+              className="h-20 lg:h-28 w-auto object-contain drop-shadow-2xl animate-swoosh"
+              priority
+            />
           </div>
 
-          {/* Right */}
-          <div data-aos="fade-left">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-orange-400 blur-3xl opacity-20 rounded-full" />
+          {/* Firm Name */}
+          <h1 className="text-4xl md:text-6xl xl:text-7xl font-black text-white leading-tight tracking-tight">
+            THE TRAFFIC
+            <br />
+            <span className="text-brand-gold">LAW FIRM</span>
+          </h1>
 
-              <div className="relative bg-black/5 dark:bg-white/10 backdrop-blur-xl border border-black/10 dark:border-white/10 rounded-[32px] p-5">
-                <div className="relative h-[600px] w-full rounded-3xl overflow-hidden">
-                  <Image
-                    src="/assets/images/img4.png"
-                    alt="Traffic Ticket Upload"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+          {/* Tagline */}
+          <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+            Here to Defend You — Over 30 years of dedicated legal
+            representation for drivers in Miami and South Florida.
+          </p>
 
-                <div className="absolute bottom-10 left-4 right-4">
-                  <div className="bg-white/90 dark:bg-black/80 backdrop-blur-xl rounded-2xl p-5 border border-orange-500/20">
-                    <div className="flex items-center gap-2 text-orange-400 mb-2">
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                    </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <Link href="/submit-ticket">
+              <button className="bg-brand-gold hover:bg-brand-gold-light text-white px-8 py-4 rounded-xl font-bold transition-all hover:scale-105 shadow-lg shadow-brand-gold/25">
+                Submit Citation →
+              </button>
+            </Link>
+            <a href="tel:+13054420243">
+              <button className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:bg-white/10 backdrop-blur-sm transition-all">
+                <FaPhoneAlt className="text-brand-gold" />
+                Call (305) 442-0243
+              </button>
+            </a>
+          </div>
 
-                    <h4 className="text-gray-900 dark:text-white font-semibold">
-                      Upload Your Ticket in Under 60 Seconds
-                    </h4>
+          {/* Stats Bar */}
+          <div className="flex flex-wrap justify-center gap-10 lg:gap-16 mt-14">
+            <div>
+              <h3 className="text-brand-gold text-3xl lg:text-4xl font-black">
+                30+
+              </h3>
+              <p className="text-white/60 text-sm mt-1">Years Experience</p>
+            </div>
 
-                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                      Fast, secure and confidential review process.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="w-px bg-white/20 hidden lg:block" />
+
+            <div>
+              <h3 className="text-brand-gold text-3xl lg:text-4xl font-black">
+                10K+
+              </h3>
+              <p className="text-white/60 text-sm mt-1">Cases Handled</p>
+            </div>
+
+            <div className="w-px bg-white/20 hidden lg:block" />
+
+            <div>
+              <h3 className="text-brand-gold text-3xl lg:text-4xl font-black">
+                95%
+              </h3>
+              <p className="text-white/60 text-sm mt-1">Success Rate</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+          <div className="w-1.5 h-3 bg-brand-gold rounded-full animate-bounce" />
         </div>
       </div>
     </section>
