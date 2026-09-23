@@ -13,7 +13,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/assets/images/img1.png"
+        poster="/assets/images/highway-video.mp4" type="video/mp4"
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover"
       >
